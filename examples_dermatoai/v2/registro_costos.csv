@@ -1,0 +1,1 @@
+run_id,fecha,integrante,hardware,modelo,seed,split,train_seconds,inference_seconds,rag_seconds,llm_provider,llm_model,costo_monetario,fuente_del_costo,observaciones

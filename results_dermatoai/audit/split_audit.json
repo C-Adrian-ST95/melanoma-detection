@@ -1,0 +1,15 @@
+{
+  "images": 2298,
+  "patients": 1373,
+  "duplicate_image_ids": 0,
+  "patients_in_multiple_splits": 0,
+  "patient_lesion_pairs_in_multiple_splits": 0,
+  "ambiguous_raw_lesion_ids_in_multiple_patients": 250,
+  "sizes": {
+    "test": 329,
+    "train": 1640,
+    "val": 329
+  },
+  "caveat": "Sin imágenes no es posible comprobar duplicados visuales ni validar el origen de las etiquetas.",
+  "prediction_runs_with_mismatches": []
+}

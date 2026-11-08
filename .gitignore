@@ -1,0 +1,10 @@
+.venv/
+.venv_dermatoai/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+data/raw/
+*.pt
+*.pth
+/knowledge_local/embedding_model/
+/DermatoAI_RAG/paper/tectonic-bin/

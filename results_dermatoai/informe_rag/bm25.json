@@ -1,0 +1,134 @@
+{
+  "method": "lexical",
+  "k": 6,
+  "n": 1,
+  "unit": "document-page, deduplicated after top-k chunks",
+  "note": "Métricas de recuperación; no prueban corrección clínica ni fidelidad semántica de las respuestas.",
+  "cases": [
+    {
+      "id": "q01",
+      "question": "¿En qué tres categorías se dividen los factores de riesgo del melanoma según la sección I.c de la guía?",
+      "unanswerable": false,
+      "recall": 1.0,
+      "precision": 0.2,
+      "reciprocal_rank": 1.0,
+      "ndcg": 1.0,
+      "correctly_empty": null,
+      "latency_ms": 26.19639999466017,
+      "hits": [
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 5,
+          "score": 18.920687054245057,
+          "id": "41ffb23afb17affdf57b2fc6:23"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 31,
+          "score": 10.26985053867035,
+          "id": "41ffb23afb17affdf57b2fc6:209"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 6,
+          "score": 9.846813654272376,
+          "id": "f43f03b7077ade765b51a80c:52"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 1,
+          "score": 9.801581572229667,
+          "id": "41ffb23afb17affdf57b2fc6:3"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 5,
+          "score": 9.015788039439961,
+          "id": "41ffb23afb17affdf57b2fc6:24"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 4,
+          "score": 8.391953893696993,
+          "id": "41ffb23afb17affdf57b2fc6:19"
+        }
+      ]
+    }
+  ],
+  "corpus": [
+    {
+      "filename": "404-2962-1-PB.pdf",
+      "sha256": "935ebc27c01f0d5bc23914bac1d9e00c46bb3efdc3113a27642c0402a51e2b8b",
+      "metadata": "{\"categories\": [], \"language\": \"auto\", \"license\": \"\", \"modality\": \"not_specified\", \"organization\": \"\", \"title\": \"404-2962-1-PB\", \"url\": \"\"}"
+    },
+    {
+      "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+      "sha256": "f1163fc2f859be33e46b3cf1dad264081c569fa977989b279a7f851a02975e5f",
+      "metadata": "{\"categories\": [], \"language\": \"auto\", \"license\": \"\", \"modality\": \"not_specified\", \"organization\": \"\", \"title\": \"revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025\", \"url\": \"\"}"
+    }
+  ],
+  "cases_sha256": "693d85eb3df402c4afc8e3df1d6a72e2bba4302928805a57b2692aa8f3fa02bd",
+  "filters": {
+    "include_review": false,
+    "categories": null,
+    "languages": [
+      "es",
+      "und"
+    ]
+  },
+  "encoder_id": null,
+  "created": "2026-11-07T03:17:14.982260+00:00",
+  "recall": 1.0,
+  "precision": 0.2,
+  "reciprocal_rank": 1.0,
+  "ndcg": 1.0,
+  "correctly_empty": null,
+  "latency_ms": 26.19639999466017,
+  "ablation_without_retrieval": {
+    "method": "none",
+    "k": 6,
+    "n": 1,
+    "unit": "document-page, deduplicated after top-k chunks",
+    "note": "Métricas de recuperación; no prueban corrección clínica ni fidelidad semántica de las respuestas.",
+    "cases": [
+      {
+        "id": "q01",
+        "question": "¿En qué tres categorías se dividen los factores de riesgo del melanoma según la sección I.c de la guía?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.00100000761449337,
+        "hits": []
+      }
+    ],
+    "corpus": [
+      {
+        "filename": "404-2962-1-PB.pdf",
+        "sha256": "935ebc27c01f0d5bc23914bac1d9e00c46bb3efdc3113a27642c0402a51e2b8b",
+        "metadata": "{\"categories\": [], \"language\": \"auto\", \"license\": \"\", \"modality\": \"not_specified\", \"organization\": \"\", \"title\": \"404-2962-1-PB\", \"url\": \"\"}"
+      },
+      {
+        "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+        "sha256": "f1163fc2f859be33e46b3cf1dad264081c569fa977989b279a7f851a02975e5f",
+        "metadata": "{\"categories\": [], \"language\": \"auto\", \"license\": \"\", \"modality\": \"not_specified\", \"organization\": \"\", \"title\": \"revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025\", \"url\": \"\"}"
+      }
+    ],
+    "cases_sha256": "693d85eb3df402c4afc8e3df1d6a72e2bba4302928805a57b2692aa8f3fa02bd",
+    "filters": {
+      "include_review": false,
+      "categories": null,
+      "languages": null
+    },
+    "encoder_id": null,
+    "created": "2026-11-07T03:17:14.988565+00:00",
+    "recall": 0.0,
+    "precision": 0.0,
+    "reciprocal_rank": 0.0,
+    "ndcg": 0.0,
+    "correctly_empty": null,
+    "latency_ms": 0.00100000761449337
+  }
+}

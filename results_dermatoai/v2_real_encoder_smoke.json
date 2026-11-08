@@ -1,0 +1,17 @@
+{
+  "purpose": "Prueba de software con encoder real y documentos artificiales, no evaluación clínica ni del corpus médico.",
+  "encoder": "sentence-transformer-sha256:227f7fb3d2943d3ef985e79055e4cb03e22c5fa587d9924eb9a17dc73e691bde",
+  "vectors_saved": 3,
+  "checks": [
+    {
+      "method": "semantic",
+      "first_file": "horario.txt",
+      "score": 0.7249768972396851
+    },
+    {
+      "method": "hybrid",
+      "first_file": "horario.txt",
+      "score": 0.03278688524590164
+    }
+  ]
+}

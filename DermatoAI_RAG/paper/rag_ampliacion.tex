@@ -1,0 +1,82 @@
+\appendices
+\section{Módulo RAG y evaluación de recuperación}
+\label{app:rag}
+
+\subsection{Corpus y preparación documental}
+DermatoAI incorpora un módulo de generación aumentada por recuperación (RAG) que consulta fuentes seleccionadas para contextualizar preguntas sobre lesiones cutáneas y resultados del clasificador \cite{raglewis2020}. El corpus evaluado reúne la guía chilena de melanoma cutáneo primario \cite{ragcabrera2020} y la revisión sobre queratosis actínicas \cite{ragcanueto2025}. La Tabla~\ref{tab:rag-corpus} resume la preparación documental.
+
+\begin{table}[!ht]
+\centering
+\caption{Corpus de la evaluación RAG y estado de sus fragmentos.}
+\label{tab:rag-corpus}
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lrrrr}
+\toprule
+Fuente & Páginas & Fragmentos & Aptos & Revisión \\
+\midrule
+Guía de melanoma & 43 & 282 & 240 & 42 \\
+Queratosis actínicas & 15 & 127 & 98 & 29 \\
+\midrule
+\textbf{Total} & \textbf{58} & \textbf{409} & \textbf{338} & \textbf{71} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+La preparación extrae el texto por página, estima el orden de lectura en páginas de dos columnas y divide el contenido por secciones, párrafos y frases. Cada fragmento tiene hasta 1500 caracteres y puede compartir hasta 180 caracteres con el siguiente. Se conservan la página del PDF, la sección, el idioma estimado y el estado de revisión. SQLite almacena los metadatos, el texto por página, los fragmentos y sus vectores. Los fragmentos marcados para revisión se excluyeron de las corridas. La Figura~\ref{fig:rag-flujo} distingue la preparación del corpus y la consulta.
+
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}[node distance=3mm and 4mm,
+  ragbox/.style={draw=black!55,rounded corners=2pt,align=center,
+    minimum height=8.4mm,text width=0.256\columnwidth,inner sep=2.5pt,font=\scriptsize}]
+  \node[ragbox,fill=black!5] (pdf) {PDF y\\metadatos};
+  \node[ragbox,fill=black!5,right=of pdf] (prepare) {Texto y\\fragmentación};
+  \node[ragbox,fill=black!5,right=of prepare] (db) {SQLite\\texto y vectores};
+  \node[ragbox,below=of pdf] (q) {Pregunta\\y filtros};
+  \node[ragbox,right=of q] (search) {Recuperación\\de pasajes};
+  \node[ragbox,right=of search] (llm) {LLM y control\\de citas};
+  \draw[-{Stealth[length=1.6mm]}] (pdf) -- (prepare);
+  \draw[-{Stealth[length=1.6mm]}] (prepare) -- (db);
+  \draw[-{Stealth[length=1.6mm]}] (q) -- (search);
+  \draw[-{Stealth[length=1.6mm]}] (search) -- (llm);
+  \draw[-{Stealth[length=1.6mm]}] (db.south) -- (search.north east);
+\end{tikzpicture}
+\caption{Preparación documental y consulta del módulo RAG.}
+\label{fig:rag-flujo}
+\end{figure}
+
+\subsection{Recuperación, generación y citas}
+Se compararon tres recuperadores sobre el mismo corpus. BM25 ordena los fragmentos por coincidencia de términos con normalización por longitud \cite{ragrobertson2009}. La búsqueda semántica compara el vector de la pregunta con los vectores normalizados de los pasajes mediante similitud coseno \cite{ragreimers2019}. Ambas corridas con vectores emplearon la misma huella de encoder. La búsqueda híbrida suma contribuciones $1/(60+r)$ de cada lista, donde $r$ es el rango del fragmento en la búsqueda léxica o semántica.
+
+En la aplicación, el LLM recibe la pregunta, los pasajes seleccionados y el resultado experimental del clasificador cuando está disponible. Cada afirmación documental requiere una referencia a un fragmento recuperado y un pasaje literal que permita comprobarla. Ante un fallo de generación o de validación, la aplicación puede mostrar los pasajes originales. Esta comprobación identifica citas inexistentes o pasajes que no coinciden con el texto recuperado. La correspondencia entre una afirmación y el significado de su fuente requiere revisión humana.
+
+\subsection{Protocolo de evaluación}
+Se utilizaron 20 preguntas en español, preparadas con asistencia de un LLM, con etiquetas de relevancia por documento y página. Dieciocho preguntas tienen respaldo en el corpus y dos solicitan datos del entrenamiento o la ejecución de DermatoAI ausentes en ambos PDF. Se verificó la coincidencia de las preguntas, las huellas de los documentos y los filtros entre corridas. El recuperador seleccionó hasta seis fragmentos por consulta en español o con idioma sin determinar. Para puntuar, se agruparon los fragmentos por documento y página, conservando el orden de la primera aparición.
+
+La precisión mide la proporción de páginas recuperadas que están anotadas como pertinentes. El \emph{recall} mide la proporción de páginas anotadas que fueron recuperadas. MRR promedia el recíproco de la posición de la primera página pertinente y nDCG da mayor peso a las páginas pertinentes que aparecen primero. Estas métricas se promedian sobre las 18 preguntas con respuesta. Para las dos preguntas restantes se registró si la recuperación devolvió una lista vacía. El tiempo medio se calculó sobre las 20 consultas.
+
+\begin{table}[!t]
+\centering
+\caption{Recuperación de páginas tras seleccionar hasta seis fragmentos.}
+\label{tab:rag-resultados}
+\small
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lrrrrr}
+\toprule
+Método & Prec. (\%) & Recall (\%) & MRR & nDCG & ms \\
+\midrule
+BM25 & 20,46 & 88,89 & 0,687 & 0,738 & 40,86 \\
+Híbrida & 15,19 & 72,22 & 0,574 & 0,611 & 55,35 \\
+Semántica & 7,78 & 38,89 & 0,178 & 0,230 & 61,68 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\subsection{Resultados y análisis de errores}
+BM25 recuperó todas las páginas anotadas en 16 de las 18 preguntas con respaldo, frente a 13 con búsqueda híbrida y 7 con búsqueda semántica (Tabla~\ref{tab:rag-resultados}). La primera página fue pertinente en 10, 9 y 1 de esas consultas, respectivamente. BM25 obtuvo el mayor \emph{recall} y el menor tiempo medio en estas corridas.
+
+En el caso A04, los tres métodos recuperaron las dos páginas anotadas sobre AKASI. En M08 y A08, ninguno recuperó la página anotada entre sus seis fragmentos. Son consultas sobre limitaciones de la microscopía confocal de reflectancia y técnicas de imagen, respectivamente. En N01 y N02, los tres métodos devolvieron fragmentos, aunque la información solicitada estaba ausente. La proporción de recuperaciones vacías fue 0 de 2 para cada método.
+
+El corpus abarca dos fuentes y un conjunto acotado de preguntas, con varias consultas sobre una misma página. Por ello, la comparación describe esta configuración y este conjunto de anotaciones. La fidelidad de la redacción del LLM, el respaldo semántico de sus citas y su capacidad de abstenerse quedan pendientes de evaluación con conversaciones exportadas. Los resultados por caso, las etiquetas de páginas y el inventario del corpus acompañan las fuentes del artículo.

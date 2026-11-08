@@ -1,0 +1,1293 @@
+{
+  "method": "semantic",
+  "k": 6,
+  "n": 20,
+  "unit": "document-page, deduplicated after top-k chunks",
+  "note": "Métricas de recuperación; no prueban corrección clínica ni fidelidad semántica de las respuestas.",
+  "cases": [
+    {
+      "id": "M01",
+      "question": "Según la sección III.a de la guía chilena, ¿cuáles son los cuatro subtipos clásicos de melanoma cutáneo?",
+      "unanswerable": false,
+      "recall": 0.0,
+      "precision": 0.0,
+      "reciprocal_rank": 0.0,
+      "ndcg": 0.0,
+      "correctly_empty": null,
+      "latency_ms": 86.6243000200484,
+      "hits": [
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 1,
+          "score": 0.7952094078063965,
+          "id": "41ffb23afb17affdf57b2fc6:6"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 24,
+          "score": 0.7799502611160278,
+          "id": "41ffb23afb17affdf57b2fc6:164"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 18,
+          "score": 0.713433027267456,
+          "id": "41ffb23afb17affdf57b2fc6:122"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 16,
+          "score": 0.7061371803283691,
+          "id": "41ffb23afb17affdf57b2fc6:116"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 2,
+          "score": 0.6983377933502197,
+          "id": "41ffb23afb17affdf57b2fc6:9"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 12,
+          "score": 0.6689467430114746,
+          "id": "41ffb23afb17affdf57b2fc6:91"
+        }
+      ]
+    },
+    {
+      "id": "M02",
+      "question": "¿Qué localizaciones de melanoma se excluyeron de los estudios en la sección II.c de la guía chilena?",
+      "unanswerable": false,
+      "recall": 1.0,
+      "precision": 0.2,
+      "reciprocal_rank": 0.2,
+      "ndcg": 0.38685280723454163,
+      "correctly_empty": null,
+      "latency_ms": 57.312199991429225,
+      "hits": [
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 1,
+          "score": 0.8071619868278503,
+          "id": "41ffb23afb17affdf57b2fc6:6"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 24,
+          "score": 0.798947811126709,
+          "id": "41ffb23afb17affdf57b2fc6:164"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 4,
+          "score": 0.7689219117164612,
+          "id": "41ffb23afb17affdf57b2fc6:18"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 16,
+          "score": 0.7287052273750305,
+          "id": "41ffb23afb17affdf57b2fc6:116"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 1,
+          "score": 0.7273803949356079,
+          "id": "41ffb23afb17affdf57b2fc6:1"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 6,
+          "score": 0.7104697227478027,
+          "id": "41ffb23afb17affdf57b2fc6:30"
+        }
+      ]
+    },
+    {
+      "id": "M03",
+      "question": "En la Tabla 3 de la guía chilena, ¿qué significan las letras F y G de la regla ABCDEFG?",
+      "unanswerable": false,
+      "recall": 0.0,
+      "precision": 0.0,
+      "reciprocal_rank": 0.0,
+      "ndcg": 0.0,
+      "correctly_empty": null,
+      "latency_ms": 62.61380002251826,
+      "hits": [
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 23,
+          "score": 0.504940390586853,
+          "id": "41ffb23afb17affdf57b2fc6:158"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 22,
+          "score": 0.4905552566051483,
+          "id": "41ffb23afb17affdf57b2fc6:152"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 1,
+          "score": 0.4169197082519531,
+          "id": "41ffb23afb17affdf57b2fc6:4"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 3,
+          "score": 0.39875614643096924,
+          "id": "f43f03b7077ade765b51a80c:12"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 7,
+          "score": 0.39799433946609497,
+          "id": "41ffb23afb17affdf57b2fc6:41"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 1,
+          "score": 0.39497777819633484,
+          "id": "41ffb23afb17affdf57b2fc6:0"
+        }
+      ]
+    },
+    {
+      "id": "M04",
+      "question": "¿Cómo define la sección III.b.1 de la guía chilena el signo del patito feo?",
+      "unanswerable": false,
+      "recall": 0.0,
+      "precision": 0.0,
+      "reciprocal_rank": 0.0,
+      "ndcg": 0.0,
+      "correctly_empty": null,
+      "latency_ms": 58.53940002270974,
+      "hits": [
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 23,
+          "score": 0.5177145004272461,
+          "id": "41ffb23afb17affdf57b2fc6:158"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 22,
+          "score": 0.4961591362953186,
+          "id": "41ffb23afb17affdf57b2fc6:152"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 1,
+          "score": 0.4610564112663269,
+          "id": "f43f03b7077ade765b51a80c:0"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 1,
+          "score": 0.4448614716529846,
+          "id": "41ffb23afb17affdf57b2fc6:6"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 4,
+          "score": 0.43556690216064453,
+          "id": "f43f03b7077ade765b51a80c:31"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 16,
+          "score": 0.4232187271118164,
+          "id": "41ffb23afb17affdf57b2fc6:116"
+        }
+      ]
+    },
+    {
+      "id": "M05",
+      "question": "¿Qué plantea la regla de Garbe en la sección III.b.1 de la guía de melanoma?",
+      "unanswerable": false,
+      "recall": 1.0,
+      "precision": 0.16666666666666666,
+      "reciprocal_rank": 0.3333333333333333,
+      "ndcg": 0.5,
+      "correctly_empty": null,
+      "latency_ms": 58.6370000091847,
+      "hits": [
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 16,
+          "score": 0.680661678314209,
+          "id": "41ffb23afb17affdf57b2fc6:115"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 28,
+          "score": 0.6636307239532471,
+          "id": "41ffb23afb17affdf57b2fc6:195"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 9,
+          "score": 0.6532525420188904,
+          "id": "41ffb23afb17affdf57b2fc6:74"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 6,
+          "score": 0.6466741561889648,
+          "id": "41ffb23afb17affdf57b2fc6:29"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 12,
+          "score": 0.6457716226577759,
+          "id": "41ffb23afb17affdf57b2fc6:91"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 35,
+          "score": 0.643059492111206,
+          "id": "41ffb23afb17affdf57b2fc6:229"
+        }
+      ]
+    },
+    {
+      "id": "M06",
+      "question": "Según el apartado de diagnóstico dermatoscópico de la guía chilena, ¿qué barreras dificultan su implementación por médicos generales?",
+      "unanswerable": false,
+      "recall": 0.0,
+      "precision": 0.0,
+      "reciprocal_rank": 0.0,
+      "ndcg": 0.0,
+      "correctly_empty": null,
+      "latency_ms": 63.215000001946464,
+      "hits": [
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 22,
+          "score": 0.7910971641540527,
+          "id": "41ffb23afb17affdf57b2fc6:152"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 1,
+          "score": 0.7290546894073486,
+          "id": "41ffb23afb17affdf57b2fc6:1"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 1,
+          "score": 0.6909055113792419,
+          "id": "41ffb23afb17affdf57b2fc6:0"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 6,
+          "score": 0.6839888095855713,
+          "id": "41ffb23afb17affdf57b2fc6:32"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 22,
+          "score": 0.6687557697296143,
+          "id": "41ffb23afb17affdf57b2fc6:153"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 1,
+          "score": 0.647790789604187,
+          "id": "f43f03b7077ade765b51a80c:0"
+        }
+      ]
+    },
+    {
+      "id": "M07",
+      "question": "¿La sección III.b.3 de la guía chilena presenta la microscopía confocal como tamizaje o como evaluación de segundo nivel?",
+      "unanswerable": false,
+      "recall": 0.0,
+      "precision": 0.0,
+      "reciprocal_rank": 0.0,
+      "ndcg": 0.0,
+      "correctly_empty": null,
+      "latency_ms": 71.66669997968711,
+      "hits": [
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 6,
+          "score": 0.6003071069717407,
+          "id": "41ffb23afb17affdf57b2fc6:32"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 2,
+          "score": 0.5940765142440796,
+          "id": "f43f03b7077ade765b51a80c:10"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 7,
+          "score": 0.5626465082168579,
+          "id": "41ffb23afb17affdf57b2fc6:35"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 16,
+          "score": 0.5617420673370361,
+          "id": "41ffb23afb17affdf57b2fc6:116"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 22,
+          "score": 0.5581730008125305,
+          "id": "41ffb23afb17affdf57b2fc6:153"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 1,
+          "score": 0.5274039506912231,
+          "id": "41ffb23afb17affdf57b2fc6:1"
+        }
+      ]
+    },
+    {
+      "id": "M08",
+      "question": "¿Qué limitaciones de la microscopía confocal de reflectancia señala la guía chilena al final de su sección III.b.3?",
+      "unanswerable": false,
+      "recall": 0.0,
+      "precision": 0.0,
+      "reciprocal_rank": 0.0,
+      "ndcg": 0.0,
+      "correctly_empty": null,
+      "latency_ms": 64.81880001956597,
+      "hits": [
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 2,
+          "score": 0.5789141058921814,
+          "id": "f43f03b7077ade765b51a80c:10"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 7,
+          "score": 0.5413487553596497,
+          "id": "41ffb23afb17affdf57b2fc6:35"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 10,
+          "score": 0.526187539100647,
+          "id": "41ffb23afb17affdf57b2fc6:83"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 16,
+          "score": 0.5179195404052734,
+          "id": "41ffb23afb17affdf57b2fc6:116"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 22,
+          "score": 0.5041931867599487,
+          "id": "41ffb23afb17affdf57b2fc6:152"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 6,
+          "score": 0.49860724806785583,
+          "id": "41ffb23afb17affdf57b2fc6:32"
+        }
+      ]
+    },
+    {
+      "id": "M09",
+      "question": "En la sección III.b.4.1 de la guía chilena, ¿en qué unidad y con qué precisión se expresa el grosor tumoral de Breslow?",
+      "unanswerable": false,
+      "recall": 1.0,
+      "precision": 0.16666666666666666,
+      "reciprocal_rank": 0.5,
+      "ndcg": 0.6309297535714575,
+      "correctly_empty": null,
+      "latency_ms": 69.47499999660067,
+      "hits": [
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 26,
+          "score": 0.573025643825531,
+          "id": "41ffb23afb17affdf57b2fc6:185"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 12,
+          "score": 0.571344792842865,
+          "id": "41ffb23afb17affdf57b2fc6:92"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 24,
+          "score": 0.5440611839294434,
+          "id": "41ffb23afb17affdf57b2fc6:164"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 16,
+          "score": 0.5410947799682617,
+          "id": "41ffb23afb17affdf57b2fc6:116"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 20,
+          "score": 0.5335216522216797,
+          "id": "41ffb23afb17affdf57b2fc6:134"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 8,
+          "score": 0.5238398313522339,
+          "id": "41ffb23afb17affdf57b2fc6:72"
+        }
+      ]
+    },
+    {
+      "id": "A01",
+      "question": "Según la introducción de la revisión de queratosis actínicas de 2025, ¿cuál es su principal causa y qué tipo de radiación destaca?",
+      "unanswerable": false,
+      "recall": 1.0,
+      "precision": 0.16666666666666666,
+      "reciprocal_rank": 0.5,
+      "ndcg": 0.6309297535714575,
+      "correctly_empty": null,
+      "latency_ms": 69.65710001531988,
+      "hits": [
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 1,
+          "score": 0.5818736553192139,
+          "id": "f43f03b7077ade765b51a80c:2"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 2,
+          "score": 0.5439132452011108,
+          "id": "f43f03b7077ade765b51a80c:5"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 4,
+          "score": 0.5223420858383179,
+          "id": "41ffb23afb17affdf57b2fc6:16"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 9,
+          "score": 0.5105748772621155,
+          "id": "f43f03b7077ade765b51a80c:81"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 4,
+          "score": 0.5072355270385742,
+          "id": "f43f03b7077ade765b51a80c:32"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 22,
+          "score": 0.5010067224502563,
+          "id": "41ffb23afb17affdf57b2fc6:153"
+        }
+      ]
+    },
+    {
+      "id": "A02",
+      "question": "¿Cómo define el apartado Diagnóstico clínico de la revisión de queratosis actínicas de 2025 el campo de cancerización?",
+      "unanswerable": false,
+      "recall": 1.0,
+      "precision": 0.16666666666666666,
+      "reciprocal_rank": 0.16666666666666666,
+      "ndcg": 0.3562071871080222,
+      "correctly_empty": null,
+      "latency_ms": 58.55039999005385,
+      "hits": [
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 26,
+          "score": 0.6757485866546631,
+          "id": "41ffb23afb17affdf57b2fc6:185"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 21,
+          "score": 0.6681933999061584,
+          "id": "41ffb23afb17affdf57b2fc6:147"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 4,
+          "score": 0.6247450113296509,
+          "id": "f43f03b7077ade765b51a80c:32"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 39,
+          "score": 0.6153167486190796,
+          "id": "41ffb23afb17affdf57b2fc6:256"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 12,
+          "score": 0.6143125891685486,
+          "id": "41ffb23afb17affdf57b2fc6:93"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 2,
+          "score": 0.6027758121490479,
+          "id": "f43f03b7077ade765b51a80c:5"
+        }
+      ]
+    },
+    {
+      "id": "A03",
+      "question": "Según el texto sobre Röwert-Huber de la revisión de queratosis actínicas de 2025, ¿puede deducirse el grado histológico a partir de la apariencia clínica?",
+      "unanswerable": false,
+      "recall": 0.0,
+      "precision": 0.0,
+      "reciprocal_rank": 0.0,
+      "ndcg": 0.0,
+      "correctly_empty": null,
+      "latency_ms": 59.463499987032264,
+      "hits": [
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 3,
+          "score": 0.6671121120452881,
+          "id": "f43f03b7077ade765b51a80c:22"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 21,
+          "score": 0.5943021774291992,
+          "id": "41ffb23afb17affdf57b2fc6:143"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 32,
+          "score": 0.5797441005706787,
+          "id": "41ffb23afb17affdf57b2fc6:215"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 22,
+          "score": 0.5714143514633179,
+          "id": "41ffb23afb17affdf57b2fc6:149"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 32,
+          "score": 0.5665030479431152,
+          "id": "41ffb23afb17affdf57b2fc6:214"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 2,
+          "score": 0.5537917613983154,
+          "id": "f43f03b7077ade765b51a80c:9"
+        }
+      ]
+    },
+    {
+      "id": "A04",
+      "question": "¿Qué región y cuántas áreas evalúa AKASI, y entre qué valores oscila su puntuación, según el apartado Escalas de la revisión de queratosis actínicas?",
+      "unanswerable": false,
+      "recall": 1.0,
+      "precision": 0.3333333333333333,
+      "reciprocal_rank": 1.0,
+      "ndcg": 1.0,
+      "correctly_empty": null,
+      "latency_ms": 52.93890001485124,
+      "hits": [
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 4,
+          "score": 0.6233688592910767,
+          "id": "f43f03b7077ade765b51a80c:35"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 5,
+          "score": 0.5511945486068726,
+          "id": "f43f03b7077ade765b51a80c:37"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 3,
+          "score": 0.526482880115509,
+          "id": "f43f03b7077ade765b51a80c:21"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 29,
+          "score": 0.5190761685371399,
+          "id": "41ffb23afb17affdf57b2fc6:199"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 16,
+          "score": 0.49489930272102356,
+          "id": "41ffb23afb17affdf57b2fc6:117"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 7,
+          "score": 0.48921701312065125,
+          "id": "41ffb23afb17affdf57b2fc6:35"
+        }
+      ]
+    },
+    {
+      "id": "A05",
+      "question": "Según el apartado de escalas de la revisión de queratosis actínicas de 2025, ¿qué evalúa AK-FAS y cuántos grados distingue?",
+      "unanswerable": false,
+      "recall": 0.0,
+      "precision": 0.0,
+      "reciprocal_rank": 0.0,
+      "ndcg": 0.0,
+      "correctly_empty": null,
+      "latency_ms": 48.172299982979894,
+      "hits": [
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 4,
+          "score": 0.6586793661117554,
+          "id": "f43f03b7077ade765b51a80c:35"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 3,
+          "score": 0.5654672384262085,
+          "id": "f43f03b7077ade765b51a80c:21"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 4,
+          "score": 0.5572023391723633,
+          "id": "f43f03b7077ade765b51a80c:32"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 7,
+          "score": 0.5473052263259888,
+          "id": "41ffb23afb17affdf57b2fc6:35"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 7,
+          "score": 0.5407030582427979,
+          "id": "f43f03b7077ade765b51a80c:65"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 7,
+          "score": 0.5384846925735474,
+          "id": "41ffb23afb17affdf57b2fc6:41"
+        }
+      ]
+    },
+    {
+      "id": "A06",
+      "question": "¿Qué tres dominios incluye AKQoL y cuál es su rango de puntuación, según la revisión de queratosis actínicas de 2025?",
+      "unanswerable": false,
+      "recall": 0.0,
+      "precision": 0.0,
+      "reciprocal_rank": 0.0,
+      "ndcg": 0.0,
+      "correctly_empty": null,
+      "latency_ms": 64.1157999925781,
+      "hits": [
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 3,
+          "score": 0.6535890102386475,
+          "id": "f43f03b7077ade765b51a80c:21"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 4,
+          "score": 0.5739324688911438,
+          "id": "f43f03b7077ade765b51a80c:35"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 3,
+          "score": 0.5331628322601318,
+          "id": "f43f03b7077ade765b51a80c:12"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 7,
+          "score": 0.5185569524765015,
+          "id": "41ffb23afb17affdf57b2fc6:39"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 3,
+          "score": 0.5144867897033691,
+          "id": "f43f03b7077ade765b51a80c:14"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 7,
+          "score": 0.5064048767089844,
+          "id": "41ffb23afb17affdf57b2fc6:41"
+        }
+      ]
+    },
+    {
+      "id": "A07",
+      "question": "En el apartado Fotoprotección de la revisión de queratosis actínicas de 2025, ¿qué limitaciones tiene la evidencia sobre fotoliasas?",
+      "unanswerable": false,
+      "recall": 1.0,
+      "precision": 0.2,
+      "reciprocal_rank": 0.5,
+      "ndcg": 0.6309297535714575,
+      "correctly_empty": null,
+      "latency_ms": 67.7686000126414,
+      "hits": [
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 4,
+          "score": 0.5648512244224548,
+          "id": "f43f03b7077ade765b51a80c:31"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 5,
+          "score": 0.5310078263282776,
+          "id": "f43f03b7077ade765b51a80c:39"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 5,
+          "score": 0.5176754593849182,
+          "id": "41ffb23afb17affdf57b2fc6:23"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 9,
+          "score": 0.5116682052612305,
+          "id": "f43f03b7077ade765b51a80c:80"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 3,
+          "score": 0.4956686198711395,
+          "id": "f43f03b7077ade765b51a80c:19"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 9,
+          "score": 0.47606801986694336,
+          "id": "f43f03b7077ade765b51a80c:81"
+        }
+      ]
+    },
+    {
+      "id": "A08",
+      "question": "¿Qué tres técnicas aparecen bajo Técnicas de imagen en el diagnóstico de queratosis actínicas en la revisión de 2025?",
+      "unanswerable": false,
+      "recall": 0.0,
+      "precision": 0.0,
+      "reciprocal_rank": 0.0,
+      "ndcg": 0.0,
+      "correctly_empty": null,
+      "latency_ms": 54.8949999792967,
+      "hits": [
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 4,
+          "score": 0.672076940536499,
+          "id": "f43f03b7077ade765b51a80c:31"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 27,
+          "score": 0.5897669792175293,
+          "id": "41ffb23afb17affdf57b2fc6:191"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 21,
+          "score": 0.5768845677375793,
+          "id": "41ffb23afb17affdf57b2fc6:147"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 31,
+          "score": 0.5735085606575012,
+          "id": "41ffb23afb17affdf57b2fc6:212"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 10,
+          "score": 0.5640743970870972,
+          "id": "f43f03b7077ade765b51a80c:93"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 26,
+          "score": 0.5619858503341675,
+          "id": "41ffb23afb17affdf57b2fc6:185"
+        }
+      ]
+    },
+    {
+      "id": "A09",
+      "question": "En el apartado Fotoprotección de la revisión de queratosis actínicas de 2025, ¿qué tres grupos de filtros se describen?",
+      "unanswerable": false,
+      "recall": 0.0,
+      "precision": 0.0,
+      "reciprocal_rank": 0.0,
+      "ndcg": 0.0,
+      "correctly_empty": null,
+      "latency_ms": 63.97970000398345,
+      "hits": [
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 4,
+          "score": 0.5678772926330566,
+          "id": "f43f03b7077ade765b51a80c:31"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 3,
+          "score": 0.553712010383606,
+          "id": "f43f03b7077ade765b51a80c:21"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 2,
+          "score": 0.5149868130683899,
+          "id": "41ffb23afb17affdf57b2fc6:9"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 4,
+          "score": 0.4847721457481384,
+          "id": "f43f03b7077ade765b51a80c:32"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 3,
+          "score": 0.47443997859954834,
+          "id": "f43f03b7077ade765b51a80c:12"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 7,
+          "score": 0.47238823771476746,
+          "id": "41ffb23afb17affdf57b2fc6:37"
+        }
+      ]
+    },
+    {
+      "id": "N01",
+      "question": "Según estos dos documentos, ¿qué tasa de aprendizaje se utilizó para entrenar el modelo ViT-S/16 de DermatoAI?",
+      "unanswerable": true,
+      "recall": null,
+      "precision": null,
+      "reciprocal_rank": null,
+      "ndcg": null,
+      "correctly_empty": false,
+      "latency_ms": 53.19750000489876,
+      "hits": [
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 7,
+          "score": 0.43870389461517334,
+          "id": "41ffb23afb17affdf57b2fc6:35"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 10,
+          "score": 0.4313434362411499,
+          "id": "41ffb23afb17affdf57b2fc6:80"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 8,
+          "score": 0.4299565255641937,
+          "id": "f43f03b7077ade765b51a80c:74"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 7,
+          "score": 0.4279933273792267,
+          "id": "41ffb23afb17affdf57b2fc6:41"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 6,
+          "score": 0.4174017906188965,
+          "id": "f43f03b7077ade765b51a80c:60"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 7,
+          "score": 0.4170433282852173,
+          "id": "41ffb23afb17affdf57b2fc6:36"
+        }
+      ]
+    },
+    {
+      "id": "N02",
+      "question": "¿Qué puntuación softmax obtuvo DermatoAI para la imagen de prueba IMG_RAG_0001.png según estos documentos?",
+      "unanswerable": true,
+      "recall": null,
+      "precision": null,
+      "reciprocal_rank": null,
+      "ndcg": null,
+      "correctly_empty": false,
+      "latency_ms": 48.01160001079552,
+      "hits": [
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 8,
+          "score": 0.43348339200019836,
+          "id": "f43f03b7077ade765b51a80c:74"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 7,
+          "score": 0.41952693462371826,
+          "id": "41ffb23afb17affdf57b2fc6:35"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 4,
+          "score": 0.4138372540473938,
+          "id": "f43f03b7077ade765b51a80c:31"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 25,
+          "score": 0.40370872616767883,
+          "id": "41ffb23afb17affdf57b2fc6:175"
+        },
+        {
+          "filename": "404-2962-1-PB.pdf",
+          "page": 10,
+          "score": 0.3852536976337433,
+          "id": "41ffb23afb17affdf57b2fc6:81"
+        },
+        {
+          "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+          "page": 3,
+          "score": 0.3672100901603699,
+          "id": "f43f03b7077ade765b51a80c:14"
+        }
+      ]
+    }
+  ],
+  "corpus": [
+    {
+      "filename": "404-2962-1-PB.pdf",
+      "sha256": "935ebc27c01f0d5bc23914bac1d9e00c46bb3efdc3113a27642c0402a51e2b8b",
+      "metadata": "{\"categories\": [], \"language\": \"auto\", \"license\": \"\", \"modality\": \"not_specified\", \"organization\": \"\", \"title\": \"404-2962-1-PB\", \"url\": \"\"}"
+    },
+    {
+      "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+      "sha256": "f1163fc2f859be33e46b3cf1dad264081c569fa977989b279a7f851a02975e5f",
+      "metadata": "{\"categories\": [], \"language\": \"auto\", \"license\": \"\", \"modality\": \"not_specified\", \"organization\": \"\", \"title\": \"revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025\", \"url\": \"\"}"
+    }
+  ],
+  "cases_sha256": "62a5cf7ff6ce2a7eb1d3813a5a8dc84ae124f59d706d2bb9d121f0bf09471ea4",
+  "filters": {
+    "include_review": false,
+    "categories": null,
+    "languages": [
+      "es",
+      "und"
+    ]
+  },
+  "encoder_id": "sentence-transformer-sha256:52f94c5b324d75133331bc7236c8a17f44eb81ce4279d702675804d9aa7ca0c3",
+  "created": "2026-11-07T03:39:28.750446+00:00",
+  "recall": 0.3888888888888889,
+  "precision": 0.07777777777777778,
+  "reciprocal_rank": 0.17777777777777778,
+  "ndcg": 0.2297694030587187,
+  "correctly_empty": 0.0,
+  "latency_ms": 61.68263000290608,
+  "ablation_without_retrieval": {
+    "method": "none",
+    "k": 6,
+    "n": 20,
+    "unit": "document-page, deduplicated after top-k chunks",
+    "note": "Métricas de recuperación; no prueban corrección clínica ni fidelidad semántica de las respuestas.",
+    "cases": [
+      {
+        "id": "M01",
+        "question": "Según la sección III.a de la guía chilena, ¿cuáles son los cuatro subtipos clásicos de melanoma cutáneo?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000400003045797348,
+        "hits": []
+      },
+      {
+        "id": "M02",
+        "question": "¿Qué localizaciones de melanoma se excluyeron de los estudios en la sección II.c de la guía chilena?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000300002284348011,
+        "hits": []
+      },
+      {
+        "id": "M03",
+        "question": "En la Tabla 3 de la guía chilena, ¿qué significan las letras F y G de la regla ABCDEFG?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000200001522898674,
+        "hits": []
+      },
+      {
+        "id": "M04",
+        "question": "¿Cómo define la sección III.b.1 de la guía chilena el signo del patito feo?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000200001522898674,
+        "hits": []
+      },
+      {
+        "id": "M05",
+        "question": "¿Qué plantea la regla de Garbe en la sección III.b.1 de la guía de melanoma?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000200001522898674,
+        "hits": []
+      },
+      {
+        "id": "M06",
+        "question": "Según el apartado de diagnóstico dermatoscópico de la guía chilena, ¿qué barreras dificultan su implementación por médicos generales?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000200001522898674,
+        "hits": []
+      },
+      {
+        "id": "M07",
+        "question": "¿La sección III.b.3 de la guía chilena presenta la microscopía confocal como tamizaje o como evaluación de segundo nivel?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000100000761449337,
+        "hits": []
+      },
+      {
+        "id": "M08",
+        "question": "¿Qué limitaciones de la microscopía confocal de reflectancia señala la guía chilena al final de su sección III.b.3?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000100000761449337,
+        "hits": []
+      },
+      {
+        "id": "M09",
+        "question": "En la sección III.b.4.1 de la guía chilena, ¿en qué unidad y con qué precisión se expresa el grosor tumoral de Breslow?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000100000761449337,
+        "hits": []
+      },
+      {
+        "id": "A01",
+        "question": "Según la introducción de la revisión de queratosis actínicas de 2025, ¿cuál es su principal causa y qué tipo de radiación destaca?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000200001522898674,
+        "hits": []
+      },
+      {
+        "id": "A02",
+        "question": "¿Cómo define el apartado Diagnóstico clínico de la revisión de queratosis actínicas de 2025 el campo de cancerización?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000100000761449337,
+        "hits": []
+      },
+      {
+        "id": "A03",
+        "question": "Según el texto sobre Röwert-Huber de la revisión de queratosis actínicas de 2025, ¿puede deducirse el grado histológico a partir de la apariencia clínica?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000200001522898674,
+        "hits": []
+      },
+      {
+        "id": "A04",
+        "question": "¿Qué región y cuántas áreas evalúa AKASI, y entre qué valores oscila su puntuación, según el apartado Escalas de la revisión de queratosis actínicas?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000200001522898674,
+        "hits": []
+      },
+      {
+        "id": "A05",
+        "question": "Según el apartado de escalas de la revisión de queratosis actínicas de 2025, ¿qué evalúa AK-FAS y cuántos grados distingue?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000100000761449337,
+        "hits": []
+      },
+      {
+        "id": "A06",
+        "question": "¿Qué tres dominios incluye AKQoL y cuál es su rango de puntuación, según la revisión de queratosis actínicas de 2025?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000100000761449337,
+        "hits": []
+      },
+      {
+        "id": "A07",
+        "question": "En el apartado Fotoprotección de la revisión de queratosis actínicas de 2025, ¿qué limitaciones tiene la evidencia sobre fotoliasas?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000100000761449337,
+        "hits": []
+      },
+      {
+        "id": "A08",
+        "question": "¿Qué tres técnicas aparecen bajo Técnicas de imagen en el diagnóstico de queratosis actínicas en la revisión de 2025?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000100000761449337,
+        "hits": []
+      },
+      {
+        "id": "A09",
+        "question": "En el apartado Fotoprotección de la revisión de queratosis actínicas de 2025, ¿qué tres grupos de filtros se describen?",
+        "unanswerable": false,
+        "recall": 0.0,
+        "precision": 0.0,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "correctly_empty": null,
+        "latency_ms": 0.000100000761449337,
+        "hits": []
+      },
+      {
+        "id": "N01",
+        "question": "Según estos dos documentos, ¿qué tasa de aprendizaje se utilizó para entrenar el modelo ViT-S/16 de DermatoAI?",
+        "unanswerable": true,
+        "recall": null,
+        "precision": null,
+        "reciprocal_rank": null,
+        "ndcg": null,
+        "correctly_empty": true,
+        "latency_ms": 0.000100000761449337,
+        "hits": []
+      },
+      {
+        "id": "N02",
+        "question": "¿Qué puntuación softmax obtuvo DermatoAI para la imagen de prueba IMG_RAG_0001.png según estos documentos?",
+        "unanswerable": true,
+        "recall": null,
+        "precision": null,
+        "reciprocal_rank": null,
+        "ndcg": null,
+        "correctly_empty": true,
+        "latency_ms": 0.000100000761449337,
+        "hits": []
+      }
+    ],
+    "corpus": [
+      {
+        "filename": "404-2962-1-PB.pdf",
+        "sha256": "935ebc27c01f0d5bc23914bac1d9e00c46bb3efdc3113a27642c0402a51e2b8b",
+        "metadata": "{\"categories\": [], \"language\": \"auto\", \"license\": \"\", \"modality\": \"not_specified\", \"organization\": \"\", \"title\": \"404-2962-1-PB\", \"url\": \"\"}"
+      },
+      {
+        "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+        "sha256": "f1163fc2f859be33e46b3cf1dad264081c569fa977989b279a7f851a02975e5f",
+        "metadata": "{\"categories\": [], \"language\": \"auto\", \"license\": \"\", \"modality\": \"not_specified\", \"organization\": \"\", \"title\": \"revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025\", \"url\": \"\"}"
+      }
+    ],
+    "cases_sha256": "62a5cf7ff6ce2a7eb1d3813a5a8dc84ae124f59d706d2bb9d121f0bf09471ea4",
+    "filters": {
+      "include_review": false,
+      "categories": null,
+      "languages": null
+    },
+    "encoder_id": null,
+    "created": "2026-11-07T03:39:28.753800+00:00",
+    "recall": 0.0,
+    "precision": 0.0,
+    "reciprocal_rank": 0.0,
+    "ndcg": 0.0,
+    "correctly_empty": 1.0,
+    "latency_ms": 0.0001600012183189392
+  }
+}

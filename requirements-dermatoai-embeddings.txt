@@ -1,0 +1,4 @@
+# Opcional: solo para recuperación semántica/híbrida. Primero instale el núcleo v2.
+sentence-transformers==5.1.2
+transformers==4.57.6
+huggingface-hub==0.36.2

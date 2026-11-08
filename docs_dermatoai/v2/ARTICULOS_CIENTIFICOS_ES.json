@@ -1,0 +1,68 @@
+[
+  {
+    "category": "ACK",
+    "title": "Revisión del estado actual de las queratosis actínicas: etiopatogenia, diagnóstico y tratamientos disponibles",
+    "authors": "J. Cañueto, L. Turrión y C. Ferrándiz-Pulido",
+    "publication": "Actas Dermo-Sifiliográficas 116 (2025): 740-754",
+    "doi": "10.1016/j.ad.2025.02.024",
+    "url": "https://scientiasalut.gencat.cat/bitstream/handle/11351/13978/revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf?isAllowed=y&sequence=1",
+    "filename": "01_queratosis_actinica.pdf",
+    "modality": "mixed",
+    "scope": "Priorizar definiciones, diagnóstico y límites; no utilizar para prescribir tratamientos."
+  },
+  {
+    "category": "BCC",
+    "title": "Carcinoma basocelular: actualización en diagnóstico",
+    "authors": "Ana San Juan-Romero y Judit Pérez-Rendon",
+    "publication": "Dermatología Peruana 31(3) (2021): 199-204",
+    "doi": null,
+    "url": "https://www.dermatolperu.org/assets/uploads/revista_cgkn_01_Articulo_revision_31-3_compressed.pdf",
+    "filename": "02_carcinoma_basocelular.pdf",
+    "modality": "mixed",
+    "scope": "Revisión publicada por la Sociedad Peruana de Dermatología; distinguir examen clínico, dermatoscopia y otros métodos."
+  },
+  {
+    "category": "MEL",
+    "title": "Guía de práctica para el manejo de melanoma cutáneo primario de la Sociedad Chilena de Dermatología",
+    "authors": "Raúl Cabrera y colaboradores",
+    "publication": "Revista Chilena de Dermatología, vol. 36(4) según el registro editorial; verificar año en la referencia final",
+    "doi": "10.31879/rcderm.v36i4.404",
+    "url": "https://rcderm.org/index.php/rcderm/article/download/404/383",
+    "filename": "03_melanoma.pdf",
+    "modality": "mixed",
+    "scope": "Guía larga: revisar extracción y seleccionar secciones de diagnóstico y limitaciones, no usar un panorama como lectura integral."
+  },
+  {
+    "category": "SCC",
+    "title": "Carcinoma epidermoide cutáneo: ¿alto o bajo riesgo?",
+    "authors": "Elena González-Guerra",
+    "publication": "Más Dermatología 44 (2023): 5-9",
+    "doi": "10.5538/1887-5181.2023.44.5",
+    "url": "https://dialnet.unirioja.es/descarga/articulo/9122480.pdf",
+    "filename": "04_carcinoma_epidermoide.pdf",
+    "modality": "mixed",
+    "scope": "Contexto documental; no deducir riesgo clínico a partir de la puntuación del clasificador ni de una foto."
+  },
+  {
+    "category": "NEV",
+    "title": "Dermatoscopía de nevos melanocíticos congénitos acrales: Puesta al día",
+    "authors": "Constanza Ramírez Rondon y María Catalina Martínez Deck",
+    "publication": "Revista Chilena de Dermatología 37(1), año nominal 2021; el PDF indica aceptación en 2022",
+    "doi": "10.31879/rcderm.v37i1.372",
+    "url": "https://rcderm.org/index.php/rcderm/article/download/372/403",
+    "filename": "05_nevos_acrales.pdf",
+    "modality": "dermoscopy",
+    "scope": "Específico para nevos congénitos acrales. No generalizar a todos los nevos ni a fotografías clínicas de cualquier localización."
+  },
+  {
+    "category": "SEK",
+    "title": "Criterios dermatoscópicos clásicos y accesorios de queratosis seborreica",
+    "authors": "Carolina Marcucci y colaboradores",
+    "publication": "Dermatología Argentina 18(6) (2012): 487-489; registro web publicado en 2013",
+    "doi": null,
+    "url": "https://dermatolarg.org.ar/index.php/dermatolarg/article/download/942/596",
+    "filename": "06_queratosis_seborreica.pdf",
+    "modality": "dermoscopy",
+    "scope": "Revisión de criterios dermatoscópicos; complementar con fuentes clínicas y comprobar vigencia."
+  }
+]

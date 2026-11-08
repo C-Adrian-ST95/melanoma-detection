@@ -1,0 +1,1 @@
+Coloque aquí PDF con texto, TXT o Markdown UTF-8. Esta carpeta no incluye contenido médico ficticio. El catálogo relaciona nombre de archivo con title, organization, url y license. También puede cargar documentos y registrar esos datos desde la pestaña Documentos. Pulse Sincronizar después de cambios manuales. No copie fotografías ni checkpoints aquí.

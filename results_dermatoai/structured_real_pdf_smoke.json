@@ -1,0 +1,35 @@
+{
+  "purpose": "Prueba de extracción con un artículo real, sin evaluar exactitud clínica ni generación LLM.",
+  "source": "https://zaguan.unizar.es/record/108582/files/texto_completo.pdf",
+  "source_pdf_redistributed": false,
+  "report": {
+    "pipeline": "2.1-structured-1",
+    "pages": 9,
+    "ready": 72,
+    "review": 11,
+    "warnings": [
+      "Página 2: orden de dos columnas estimado; revisar visualmente.",
+      "Página 3: orden de dos columnas estimado; revisar visualmente.",
+      "Página 4: orden de dos columnas estimado; revisar visualmente.",
+      "Página 6: orden de dos columnas estimado; revisar visualmente.",
+      "Página 7: orden de dos columnas estimado; revisar visualmente.",
+      "Página 8: orden de dos columnas estimado; revisar visualmente.",
+      "Página 9: orden de dos columnas estimado; revisar visualmente."
+    ],
+    "category_note": "Categorías sugeridas por palabras y metadatos; requieren comprobación humana."
+  },
+  "sections": [
+    "Bibliografía",
+    "Conclusiones",
+    "DERMATOLOGÍA PRÁCTICA",
+    "Introducción",
+    "PALABRAS CLAVE",
+    "Resumen",
+    "Sin sección identificada"
+  ],
+  "languages": {
+    "es": 43,
+    "en": 12,
+    "und": 28
+  }
+}

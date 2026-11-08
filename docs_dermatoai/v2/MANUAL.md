@@ -1,0 +1,421 @@
+# Preparar, usar y ampliar DermatoAI
+Manual operativo y de validación | Versión 2.1 | 6 de noviembre de 2026
+
+Entrega: una extensión para colocar sobre el repositorio melanoma-detection-main existente. Incluye el RAG, la página de análisis, scripts, pruebas, plantillas y esta guía. No incluye el repositorio original, el examen adjunto, fotografías, datasets, pesos .pt ni PDF médicos.
+
+## Qué resuelve esta versión
+
+Carga persistente de PDF/TXT/Markdown; inspección del texto por página; preguntas libres sin fotografía; búsqueda local BM25 y embeddings opcionales; citas con soporte literal; informe descargable; descripción visual opcional y evaluación de recuperación.
+
+Operación | Qué necesita
+--- | ---
+Consultar documentos | Documentos y entorno v2. No requiere checkpoint ni cuenta externa.
+Redactar con LLM | Modelo instalado o conexión habilitada y permisos de envío de texto.
+Clasificar fotografía | Repositorio original completo y checkpoint BEST compatible.
+Describir fotografía | Modelo visual habilitado, foto y activación expresa del envío.
+
+## Límite de la entrega
+
+El software no sustituye los resultados científicos exigidos por el examen. No se entrenó un modelo, no se recibieron sus pesos reales y no se verificó aquí una cuenta LLM real. Las pruebas usan documentos artificiales y pesos aleatorios temporales, únicamente para verificar el software.
+
+Ruta recomendada: instalación (p. 3), corpus (p. 4), consulta (p. 6), pruebas (p. 8), evaluación (p. 9), examen (pp. 10-11), confirmaciones y ampliaciones (pp. 12-13).
+
+# Instalar únicamente la extensión
+Conservar el proyecto base y evitar reemplazos accidentales
+
+## 1. Preparar una copia de trabajo
+
+Detenga Streamlit con Ctrl+C y haga una copia de su proyecto actual. Extraiga DermatoAI_RAG_v2.zip en la carpeta que contiene src, configs, results y app.py. Los archivos del ZIP se colocan directamente en esa raíz: no cree otra carpeta intermedia.
+
+```text
+melanoma-detection-main/
+  src/                     ORIGINAL, conservar
+  configs/                 ORIGINAL, conservar
+  results/checkpoints/     SUS PESOS, conservar
+  app.py                   ORIGINAL, conservar
+  app_dermatoai.py          NUEVA ENTRADA v2
+  dermatoai/               EXTENSION v2
+  knowledge_dermatoai/      DOCUMENTOS Y SQLITE v2
+  scripts_dermatoai/        COMANDOS DE LA EXTENSION
+  docs_dermatoai/v2/        MANUAL Y PROTOCOLO
+```
+
+## 2. Qué puede reemplazar el ZIP
+
+Se actualizan únicamente archivos propios de DermatoAI: app_dermatoai.py, módulos dermatoai, scripts, pruebas y documentación de la extensión. Si hizo cambios locales en ellos, conserve esa copia. No copie el ZIP sobre una carpeta vacía esperando que incluya src o los pesos.
+
+## 3. Comprobar integridad
+
+```text
+python -m scripts_dermatoai.check_v2
+```
+
+El diagnóstico compara los 106 archivos originales con el manifiesto SHA-256 recibido. Si falta alguno o cambió, muestra su ruta; no lo repara ni lo sobrescribe. Para recuperar un original, utilice su ZIP original. El adaptador classifier.py conserva su contrato y transformación.
+
+Los índices antiguos knowledge_local/index.sqlite3 y la carpeta knowledge_defaults no se borran ni se migran automáticamente. La v2 utiliza una base separada; vuelva a incorporar los PDF originales o copie los archivos autorizados a la carpeta nueva y sincronice.
+
+# Preparación en Windows
+Python 3.12 | PowerShell | entorno independiente
+
+## Opción recomendada: entorno nuevo
+
+Desde la raíz del proyecto ejecute los dos scripts siguientes. Se crea .venv_dermatoai para evitar alterar su entorno de entrenamiento existente. No requiere activar PowerShell ni cambiar políticas de ejecución de todo el equipo.
+
+```text
+powershell -ExecutionPolicy Bypass -File .\PREPARAR_DERMATOAI.ps1
+powershell -ExecutionPolicy Bypass -File .\INICIAR_DERMATOAI.ps1
+```
+
+PREPARAR instala PyTorch 2.5.1 + torchvision 0.20.1 CPU y requirements-dermatoai-v2.txt. INICIAR abre Streamlit en http://127.0.0.1:8501. Estas versiones se probaron aquí en Linux/Python 3.12; compruebe Windows y sus pesos reales con el diagnóstico y una inferencia de prueba.
+
+## Opción manual con su entorno ya funcional
+
+```text
+.\.venv\Scripts\python.exe -m pip install -r requirements-dermatoai-v2.txt
+.\.venv\Scripts\python.exe -m scripts_dermatoai.check_v2
+.\.venv\Scripts\python.exe -m streamlit run app_dermatoai.py
+```
+
+Esta opción conserva el par torch/torchvision que ya utiliza. Si el checkpoint se produjo con otras versiones, priorice el entorno compatible con ese entrenamiento. No fuerce strict=False ni desactive weights_only para eludir errores.
+
+## Primer arranque
+
+La base puede estar vacía y no haber pesos: la página debe abrir. Primero cargue documentos. BM25 utiliza SQLite y texto sin descargar un modelo de embeddings. La clasificación es independiente. Un error del motor externo debe mostrar una explicación o evidencia extractiva, no inutilizar la consulta documental.
+
+## Instalación Linux equivalente
+
+```text
+python3.12 -m venv .venv_dermatoai
+.venv_dermatoai/bin/python -m pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
+.venv_dermatoai/bin/python -m pip install -r requirements-dermatoai-v2.txt
+```
+
+# Documentos: de archivo a texto consultable
+Dos vías de incorporación con la misma base persistente
+
+## Desde la página
+
+Abra Documentos. Cargue un PDF, TXT o Markdown; complete título, institución/autor, URL y licencia o permiso. Confirme que puede usarlo y pulse Guardar e indexar documento. El archivo se conserva y el documento se selecciona para las consultas.
+
+## Desde el explorador de Windows
+
+```text
+knowledge_dermatoai/documents/
+```
+
+Copie los archivos directamente en esta carpeta, sin subcarpetas. Pulse Preparar / actualizar documentos de la carpeta. También se sincroniza una vez al iniciar cada sesión. Modifique catalog.json si desea registrar metadatos sin usar el formulario.
+
+```text
+{
+  "guia.pdf": {
+    "title": "Titulo real",
+    "organization": "Institucion real",
+    "url": "URL original",
+    "license": "Licencia o permiso comprobado"
+  }
+}
+```
+
+Comprobar | Resultado esperado
+--- | ---
+Texto seleccionable | El PDF escaneado requiere OCR previo. No se ejecuta OCR automático.
+Límites | 25 MiB, hasta 300 páginas por PDF; TXT/MD UTF-8.
+Texto extraído | Inspeccione fragmento y página. Un PDF válido puede extraerse mal: revíselo.
+Actualización | Mismo nombre: sustituye la versión válida sin duplicar fuentes. Si falla, conserva la versión previa indexada.
+Eliminación | Desde la interfaz elimina archivo, catálogo y fragmentos. Quitar solo el archivo manualmente no borra automáticamente el índice.
+
+No se incorporan documentos médicos por defecto sin verificar su contenido y permiso. Prepare fuentes que cubran ACK, BCC, MEL, NEV, SCC y SEK, y conserve sus versiones. Las URL son metadatos; esta versión no navega ni descarga páginas automáticamente.
+
+# Cómo funciona el RAG
+Recuperación de evidencia nueva para cada pregunta
+
+Etapa | Responsabilidad
+--- | ---
+Fragmentación | Por secciones, párrafos y frases: hasta 1.500 caracteres y 180 de solapamiento con frases completas. Cada fragmento conserva su página.
+Persistencia | SQLite: sources, fragments, embeddings opcionales. Archivo original y catálogo permanecen en documents.
+Búsqueda | Se aplican primero los documentos permitidos. Selección vacía significa ninguna fuente.
+Contexto | La pregunta actual guía la búsqueda. La categoría se añade solo a consultas sobre el resultado. El historial ayuda a resolver referencias.
+Respuesta | El LLM recibe los pasajes seleccionados; no recibe todo el corpus por defecto ni se entrena con él.
+Comprobación | Cada afirmación exige identificador válido y cita literal de 12 a 220 caracteres. Se conserva el soporte para inspección.
+
+Una coincidencia literal no prueba la fidelidad de una paráfrasis. La revisión humana evalúa si la fuente realmente respalda el significado de la respuesta. Los documentos, el historial y la consulta se tratan como datos, no como instrucciones del sistema.
+
+# Página de análisis y preguntas
+La fotografía es opcional para hablar con sus documentos
+
+Zona | Qué verá y qué puede hacer
+--- | ---
+Barra lateral | Motor, modelo, permiso de texto, activar documentos, tipo de búsqueda, cantidad de fragmentos, detalle y fuentes permitidas.
+Fotografía | Cargar una foto anonimizada. Seleccionar checkpoint y CPU/CUDA. Analizar imagen ejecuta el clasificador original.
+Resultado | Clase, puntuación softmax, gráfico de seis categorías y metadatos. El resultado no es diagnóstico.
+Mapa del modelo | Rollout para ViT o Grad-CAM según el código original. Su rótulo especifica lo que explica. No se interpreta como signo clínico.
+Preguntas | Escriba cualquier consulta documental; no necesita elegir una pregunta sugerida. La respuesta aparece en la conversación.
+Fuentes | Expanda las referencias para leer el pasaje y la página. El soporte literal aparece aparte.
+Informe | Generar / actualizar informe combina resultado, descripción visual disponible y explicación documental. Se descarga en Markdown.
+
+## Tres consultas de comprobación
+
+1. Pregunte por un concepto que esté explícitamente en uno de sus PDF. La respuesta debe recuperar la página correcta. 2. Pregunte algo que no figure en el corpus: debe indicar falta de evidencia. 3. Seleccione solo otro documento y repita la primera pregunta: no debe citar la fuente excluida.
+
+## Respuestas breves y detalladas
+
+El selector modifica el detalle solicitado al redactor, no la evidencia disponible. Cada pregunta genera una búsqueda nueva. Si usa Informe local (sin LLM), verá pasajes originales, no una explicación parafraseada.
+
+## Panorama documental
+
+La opción Panorama distribuye una selección de hasta 12 pasajes aptos del corpus seleccionado. Muestra cuántos fragmentos usó y cuántos existían. Si hay más, no se presenta como lectura completa de todos los documentos. Para estudiar una guía larga, limite la selección o haga consultas por tema.
+
+# Motores y lectura visual
+Activación explícita y separación de las fuentes de información
+
+Motor | Preparación
+--- | ---
+Informe local | No usa un LLM; muestra evidencia extraída. Es útil para verificar documentos y búsqueda.
+Ollama local | Instale y descargue un modelo compatible. Escriba su nombre exacto. Para visión, debe admitir imágenes. Se conecta solo a localhost.
+OpenAI API | Modelo habilitado, clave de API y permiso de enviar texto. El acceso y la facturación son distintos de ChatGPT.
+ChatGPT OAuth | Se conserva el flujo de conexión propio de DermatoAI. Seleccione un modelo del catálogo autorizado. Identidad, permiso del plan y capacidad visual no son lo mismo.
+
+## Qué hacer para describir la foto
+
+Abra Descripción visual opcional, active la casilla de procesamiento de esa fotografía y pulse Describir fotografía. Para motores externos, también debe estar autorizado el envío de texto. La imagen se recodifica como JPEG sin metadatos y se limita a 1.024 píxeles por lado; esta copia no sustituye la entrada del clasificador.
+
+## Qué aporta cada componente
+
+El clasificador entrega puntuaciones. El modelo visual describe apariencia con incertidumbre, sin asignar enfermedades. El RAG aporta información documental con referencias. La descripción visual no es evidencia de un PDF, no cambia el resultado del clasificador y no analiza clínicamente el mapa de atención.
+
+## Disponibilidad y límites
+
+El transporte acepta imágenes en API, OAuth y Ollama; eso no garantiza que la cuenta o el modelo elegido las admita. Si el proveedor rechaza la solicitud, se muestra el error y no se inventa una observación. No se probó aquí una cuenta real ni una imagen clínica. Valide esta función antes de incluirla en la sustentación.
+
+Referencia técnica: OpenAI, Images and vision, https://developers.openai.com/api/docs/guides/images-vision . Consultada el 6 de noviembre de 2026. Se utilizó para el formato input_image de Responses, no como fuente clínica.
+
+# Verificar la instalación y el software
+Comprobaciones ejecutables y límites de la evidencia
+
+## Pruebas incluidas
+
+```text
+python -m pip install -r requirements-dermatoai-test.txt
+python -m pytest tests_dermatoai -q
+python -m scripts_dermatoai.check_v2
+python -m scripts_dermatoai.audit
+```
+
+La suite ejecutada en esta preparación pasó 100 pruebas: carga y actualización documental, aislamiento de fuentes, persistencia, citas, preguntas sin fotografía, interfaz, OAuth simulado y compatibilidad de inferencia/explicabilidad con las dos arquitecturas mediante pesos aleatorios temporales.
+
+Verificación | Qué demuestra / qué no demuestra
+--- | ---
+PDF sintético con dos páginas | Conserva la página correcta; no demuestra calidad de extracción de su corpus real.
+Búsqueda e índices | Persistencia, filtros, actualización y borrado; no establece calidad clínica ni calidad del corpus real.
+Generación simulada | Valida formato, citas y fallback; no mide la capacidad del LLM de su cuenta.
+Transporte de imagen simulado | Envía un JPEG cuando se activa y exige permisos; no garantiza acceso visual del proveedor.
+Clasificador con pesos aleatorios | Compatibilidad del adaptador y los mapas; no exactitud del modelo entrenado.
+Integridad SHA-256 | Los 106 originales coinciden; no acredita autoría o validez científica de sus resultados.
+
+## Antes de una demostración real
+
+Verifique un PDF real, un caso con respuesta y otro sin respuesta; una inferencia con su BEST real; una llamada real al LLM si se usa; y una descripción visual real si se presenta esa función. Conserve los informes y anote proveedor, modelo, versiones y fecha. No publique claves ni fotos personales.
+
+Resultados de software: results_dermatoai/structured_all_tests.xml. Entorno y diagnóstico: results_dermatoai/v2_environment.json. Los resultados clínicos y el entrenamiento propio siguen pendientes de sus datos.
+
+También se ejecutó un ensayo con el encoder multilingüe real y tres documentos artificiales: las búsquedas semántica e híbrida recuperaron el archivo esperado. Su registro está en results_dermatoai/v2_real_encoder_smoke.json. No es una evaluación del corpus médico.
+
+# Medir el RAG y comparar componentes
+Separar pruebas de software, recuperación y generación
+
+## 1. Anotar un conjunto de preguntas
+
+Prepare preguntas de ajuste y preguntas de prueba separadas. Una propuesta práctica es comenzar con 20 a 30 preguntas de prueba, incluyendo casos sin respuesta y preguntas sobre varias categorías. Es una sugerencia de diseño, no un mínimo exigido por el examen. Revise el tamaño y sus límites.
+
+```text
+{"id":"q01","question":"PREGUNTA REAL",
+ "relevant":[{"filename":"guia.pdf","page":3}],
+ "unanswerable":false}
+```
+
+Use una línea JSON por caso. page es el número de página del PDF, empezando en 1; null para TXT/MD. relevant debe anotar todas las páginas pertinentes según su revisión. allowed_files es una lista opcional de archivos permitidos.
+
+## 2. Ejecutar línea base y ablaciones
+
+```text
+python -m scripts_dermatoai.evaluate_rag_v2 --cases MIS_CASOS.jsonl --method lexical --k 6 --output results_dermatoai/bm25.json
+python -m scripts_dermatoai.evaluate_rag_v2 --cases MIS_CASOS.jsonl --method hybrid --k 6 --output results_dermatoai/hybrid.json
+```
+
+El segundo comando necesita encoder y embeddings. Cada ejecución incluye el control sin recuperación con las mismas preguntas. Compare BM25 frente a semántica/híbrida y k fijo. No cambie parámetros usando el test final.
+
+Métrica | Unidad y significado
+--- | ---
+Recall / precisión | Páginas pertinentes recuperadas, deduplicadas después del top-k de fragmentos.
+MRR / nDCG | Posición de la evidencia pertinente; etiquetas binarias por documento-página.
+Abstención de recuperación | Proporción de preguntas negativas en las que no se devuelve ningún fragmento.
+Latencia | Tiempo de búsqueda. Es independiente del tiempo de generación.
+
+## 3. Revisar respuestas generadas
+
+Conserve las mismas preguntas, corpus, LLM y presupuesto. Anote afirmaciones sustentadas, citas correctas, abstención apropiada y errores visuales con revision_humana.csv, idealmente con dos revisores. El script mide recuperación, no fidelidad semántica del texto ni desempeño clínico.
+
+# Examen: requisitos R1 a R6
+Matriz de evidencia y pendientes del equipo
+
+Fuente: ExamenFinal_MIA_203.pdf, páginas 2 a 5. El documento permite modelos preentrenados, pero usarlos tal cual sin entrenamiento ni evaluación propia no cumple R1-R4. Esta extensión aporta ingeniería y herramientas de medición; no certifica que el proyecto ya cumpla el examen.
+
+Punto | Qué debe sustentar | Qué aporta / qué confirmar
+--- | --- | ---
+R1: fundamento | Arquitectura, pérdida, optimización y justificación. | Se reutiliza Net original. Confirme entrenamiento/adaptación propia y explique ViT/EfficientNet y RAG.
+R2: originalidad | Aporte sustancial del equipo y reutilización declarada. | Puede evaluar la integración documental y la trazabilidad. No atribuya al equipo código o resultados ajenos.
+R3: línea base | Comparación razonable y justa. | Use el mismo split para modelos. BM25 es una línea base del recuperador, no reemplaza la línea base del clasificador.
+R4: experimentación | Ablación, métricas pertinentes, no fuga, semillas cuando sea posible. | Mida el RAG con casos anotados. Confirme experimentos del clasificador con datos, pesos y logs propios.
+R5: interpretación | Mapas o análisis sistemático de errores. | Rollout/Grad-CAM conservados. Analice aciertos, errores y límites de lo que explican.
+R6: costo y responsabilidad | Hardware, horas de GPU, sesgos, límites y riesgos. | Complete registro_costos.csv. Distinga CPU/RAG/API de entrenamiento y no declare horas no medidas.
+
+## Comandos auxiliares del repositorio
+
+```text
+python -m scripts_dermatoai.audit
+python -m scripts_dermatoai.evaluate_batch --manifest MI_MANIFIESTO.csv --images RUTA_FOTOS --checkpoints results/checkpoints/MI_CORRIDA.pt
+```
+
+El manifiesto contiene filename,diagnostic con clases ACK, BCC, MEL, NEV, SCC, SEK. Los resultados históricos recalculados se etiquetan como históricos; no son entrenamiento ni inferencia nuevos. La partición por paciente puede auditarse en CSV, pero comprobar duplicados visuales exige las imágenes.
+
+# Examen: qué validar y qué presentar
+Rúbrica de 20 puntos y entregables independientes de la aplicación
+
+Criterio | Máximo | Evidencia para preparar
+--- | --- | ---
+Problema y teoría | 3 | Artículo I-III: problema, motivación, justificación y ecuaciones.
+Innovación | 3 | Contribución propia frente al repositorio y métodos existentes.
+Implementación | 4 | Código organizado, contrato del modelo, demo y pruebas.
+Experimentación | 3 | Baseline, ablaciones, métricas, errores, costo y límites.
+Reproducibilidad | 2 | Entorno, comandos, semillas, pesos y notebook Colab.
+Artículo IEEE | 3 | Máximo 12 páginas, incluyendo referencias y apéndices.
+Presentación | 2 | 25 minutos de exposición y 5 de preguntas; todos participan.
+
+## Artículo y diapositivas
+
+El artículo requiere resumen de 150-250 palabras, 2-4 contribuciones en la introducción, al menos 6 referencias científicas, metodología, resultados, discusión, conclusiones y una sección obligatoria con nombres completos y tareas de cada integrante. Declare la asistencia de IA y cite el material reutilizado.
+
+Se sugieren 15-20 diapositivas, entregadas en PDF. La demo en vivo es opcional y debe caber en los 25 minutos. Prepare un video de respaldo y ensaye para que todos puedan explicar cualquier parte del proyecto.
+
+## Envío del equipo
+
+Equipo<N>_Paper.pdf y su fuente LaTeX; Equipo<N>_Slides.pdf; enlace al repositorio con tag o release v1.0-final y enlace a los pesos. Debe existir un notebook de demostración en Colab y un historial de contribuciones de los integrantes.
+
+## Qué no está incluido aquí
+
+Este manual no es el artículo IEEE, las diapositivas ni un informe con resultados médicos. La entrega es solo la extensión DermatoAI. Confirme equipo, integrantes, sección y fecha: el examen indica A/B el 7 de noviembre y C el 6 de noviembre, con una única fecha por sección.
+
+# Confirmaciones antes de usar y presentar
+Complete confirmaciones.csv y conserve evidencia de cada respuesta
+
+Confirmar | Dónde comprobar / evidencia
+--- | ---
+Repositorio base completo | src, configs, data y results existen. check_v2 sin diferencias en los 106 originales.
+Pesos BEST reales | Nombre original de corrida; state_dict, config, run_id y epoch. No renombrar un _last ni un state_dict suelto.
+Corpus autorizado | PDF legible, institución, título, versión, URL y licencia comprobados. Cobertura de las categorías que pretende explicar.
+Extracción correcta | Dos o más páginas revisadas por documento; referencias coinciden con el PDF. OCR realizado si corresponde.
+Cuenta y modelo | Acceso real, nombre exacto, permisos y cuota. Una conexión no garantiza capacidad visual.
+Descripción visual | Probar solo si va a utilizarla; registrar errores y mantenerla separada del RAG.
+Resultados propios | Datos y pesos accesibles; split independiente; baseline y ablaciones ejecutadas; no copiar métricas históricas como propias.
+Costo y entorno | Hardware, tiempos, semillas, versiones y costo; API y GPU identificados por separado.
+Revisión humana | Preguntas respondibles y negativas, citas y paráfrasis revisadas. No publicar datos sensibles.
+Entrega académica | Artículo, slides, contribuciones, declaración IA, repo, release, pesos y notebook.
+
+La pestaña Evaluación y examen permite marcar una revisión y exportarla a JSON. Marcar casillas no acredita cumplimiento. Complete las rutas o enlaces de evidencia en examples_dermatoai/v2/confirmaciones.csv.
+
+## Material que debe aportar usted
+
+Pesos entrenados originales; PDF y permisos de uso; fotografías anonimizadas de prueba y sus etiquetas; acceso al modelo elegido; resultados del entrenamiento y experimentos propios; nombres y contribuciones del equipo. No hace falta compartir claves o tokens para revisar estos puntos.
+
+# Cómo aumentar documentos y funciones
+Mapa de archivos para mantener el sistema sin tocar el modelo original
+
+Quiere cambiar | Archivo / punto de extensión
+--- | ---
+Añadir información | Interfaz Documentos o knowledge_dermatoai/documents. Actualice el catálogo y sincronice.
+Longitud de fragmentos | dermatoai/preparation.py: sentence_chunks y PIPELINE_VERSION. Respalde y reprocese para comparar configuraciones sin mezclar índices.
+Búsqueda y ranking | knowledge.py: retrieve. Mantenga el filtrado de fuentes antes del ranking y evalúe con los mismos casos.
+Consulta e historial | dermatoai/service.py: query_for y respond. El historial no sustituye las fuentes.
+Estilo y citas | dermatoai/agent.py: SYSTEM y validate_claims. No retire los controles de referencias para esconder errores.
+Página | app_dermatoai.py. Mantenga separadas carga, clasificación, descripción visual y preguntas.
+Proveedor / modelo | dermatoai/llm.py. Cambie el transporte y pruebe solicitudes sin exponer credenciales.
+Descripción visual | dermatoai/vision.py. Exige activación y JSON; requiere evaluación humana de observaciones.
+Métricas RAG | dermatoai/rag_metrics.py y scripts_dermatoai/evaluate_rag_v2.py.
+Modelo entrenado | Conserve src y classifier.py. Cambiar clases o arquitectura exige un proyecto de adaptación y validación aparte.
+
+## Activar búsqueda semántica
+
+```text
+python -m pip install -r requirements-dermatoai-embeddings.txt
+python -m scripts_dermatoai.download_embeddings
+python -m scripts_dermatoai.manage_knowledge vectors
+```
+
+Después seleccione Semántica o Híbrida. Los embeddings se guardan en SQLite con el identificador del encoder. Si incorpora o actualiza documentos, recalcule vectores. No mezcle embeddings de modelos distintos. La descarga inicial requiere Internet; los documentos se vectorizan localmente.
+
+Para modificar el manual: edite docs_dermatoai/v2/manual_content.json y ejecute python -m scripts_dermatoai.build_manual_v2. ReportLab es una dependencia de documentación/pruebas. Conserve una copia de SQLite, documentos y catálogo antes de cambios estructurales.
+
+# Resolver errores y cerrar la preparación
+Diagnóstico sin reconstruir todo el repositorio
+
+Síntoma | Revisar / acción
+--- | ---
+No module named jwt | Instale requirements-dermatoai-v2.txt con el mismo Python que lanza Streamlit. El paquete es PyJWT, el import es jwt.
+Base vacía | Carpeta correcta y Sincronizar. Mire el estado de carga y confirme PDF con texto u OCR.
+No recupera evidencia | Fuentes seleccionadas, conceptos presentes y texto extraído. BM25 necesita coincidencias de palabras; pruebe semántica si necesita paráfrasis.
+Pide recalcular vectores | Cambió corpus o encoder. Ejecute manage_knowledge vectors, sin borrar su base a ciegas.
+Solo muestra extractos | Modo local o generación rechazada. Revise motor, modelo, permisos, cuota y el aviso mostrado.
+Modelo no admite imagen | Use uno con visión habilitada. La aplicación no puede conceder esa capacidad ni heredar permisos de otro demo.
+Checkpoint incompatible | Compruebe nombre, BEST y entorno. No desactive la carga estricta para forzar el archivo.
+No abre el proyecto | Ejecute desde la raíz original completa; no desde el ZIP aislado. Verifique check_v2.
+Cambió un documento | Actualice metadatos, sincronice y regenere el informe. Los contextos previos se limpian cuando cambian las fuentes.
+
+## Secuencia de cierre
+
+1. Diagnóstico e integridad. 2. Un PDF real y sus páginas. 3. Pregunta con respuesta y pregunta sin evidencia. 4. Fuente excluida no citada. 5. LLM real si se usa. 6. Checkpoint real y mapa. 7. Visión solo si se presenta. 8. Evaluación propia y registro de costo. 9. Artículo, slides, repo, pesos y contribuciones.
+
+## Fuentes y trazabilidad
+
+ExamenFinal_MIA_203.pdf: requisitos R1-R6, p. 2; restricciones y entregables, pp. 3-5; honestidad, p. 6; rúbrica, pp. 7-9. Repositorio recibido: src/train.py, src/data.py, src/corruptions.py y src/explain.py, conservados sin cambios. OpenAI Images and vision: formato de entrada visual consultado para el transporte, sin uso como fuente médica.
+
+No se distribuyen de nuevo los adjuntos del examen ni los archivos originales del repositorio. El ZIP contiene únicamente la extensión y sus recursos propios. Revise las confirmaciones pendientes antes de usar resultados en una presentación.
+
+# Novedades de la preparación documental
+Actualizar el corpus antes de volver a consultar
+
+Detenga Streamlit, respalde knowledge_dermatoai, instale las dependencias actualizadas y reinicie. Pulse Preparar / actualizar documentos de la carpeta. El esquema se amplía conservando una copia inicial rag.sqlite3.pre_21.bak. Los pasajes antiguos se reprocesan desde sus archivos; si falta el original permanecen pendientes.
+
+Mejora | Cómo revisarla
+--- | ---
+Texto estructurado | Conserva páginas y secciones. Estima columnas y limpia encabezados repetidos; no es una corrección garantizada de cualquier PDF.
+Calidad | Aparta referencias, secuencias numéricas y texto poco legible. Se conservan y pueden autorizarse tras revisión.
+Categoría e idioma | Filtros antes del ranking; categorías por palabras y metadatos, idioma estimado. Compruebe los casos sin determinar.
+Modalidad | Registre si el texto trata de fotografía clínica, dermatoscopia o ambas. No extrapolar un método a otro sin evidencia.
+Respuestas locales | Hasta tres pasajes abreviados; el texto completo sigue disponible en las referencias. No se finge generación LLM.
+Panorama | Hasta 12 pasajes aptos priorizados por documento/sección; no una muestra aleatoria ni una lectura integral.
+
+Tras cambiar o reprocesar documentos, recalcule embeddings si usa búsqueda semántica o híbrida. Las aprobaciones de la versión previa se reinician al sustituir sus fragmentos.
+
+Las reglas son heurísticas. Verifique páginas, traducción, apartados y referencias con el original. No se transforman las etiquetas de evaluación en evidencia de entrada ni se altera el clasificador.
+
+Resultados: 100 pruebas de software aprobadas; ensayo de preparación con un artículo real y prueba híbrida con encoder real. Sigue pendiente medir recuperación y fidelidad de respuestas sobre su corpus de prueba.
+
+# Artículos científicos en español
+Referencias para seleccionar y descargar; no están indexadas automáticamente
+
+Categoría | Título y publicación
+--- | ---
+ACK | Revisión del estado actual de las queratosis actínicas: etiopatogenia, diagnóstico y tratamientos disponibles. Actas Dermo-Sifiliográficas 116 (2025): 740-754.
+BCC | Carcinoma basocelular: actualización en diagnóstico. Dermatología Peruana 31(3) (2021): 199-204.
+MEL | Guía de práctica para el manejo de melanoma cutáneo primario de la Sociedad Chilena de Dermatología. Revista Chilena de Dermatología, vol. 36(4) según el registro editorial; verificar año en la referencia final.
+SCC | Carcinoma epidermoide cutáneo: ¿alto o bajo riesgo?. Más Dermatología 44 (2023): 5-9.
+NEV | Dermatoscopía de nevos melanocíticos congénitos acrales: Puesta al día. Revista Chilena de Dermatología 37(1), año nominal 2021; el PDF indica aceptación en 2022.
+SEK | Criterios dermatoscópicos clásicos y accesorios de queratosis seborreica. Dermatología Argentina 18(6) (2012): 487-489; registro web publicado en 2013.
+
+Los PDF y sus enlaces completos están enumerados en docs_dermatoai/v2/ARTICULOS_CIENTIFICOS_ES.md. La selección incluye revisiones y una guía. Revise secciones pertinentes y licencia antes de guardar cada archivo. El catálogo de ejemplo no sustituye su catálogo existente.
+
+El trabajo de nevos está limitado a lesiones congénitas acrales. Los de dermatoscopia describen estructuras que no se observan necesariamente en una foto clínica convencional. Conserve esas limitaciones al redactar las respuestas.
+
+Como complemento para BCC: Dermatoscopia del carcinoma basocelular: revisión actualizada. Álvarez-Salafranca, Ara y Zaballos. Actas Dermo-Sifiliográficas 112(4), 2021: 330-338. DOI: 10.1016/j.ad.2020.11.011.
+
+La bibliografía clínica del RAG no reemplaza las referencias de arquitecturas, entrenamiento y evaluación que necesita el artículo del examen. No se atribuye a estos artículos el desempeño de su modelo.

@@ -1,0 +1,68 @@
+{
+  "01_queratosis_actinica.pdf": {
+    "title": "Revisión del estado actual de las queratosis actínicas: etiopatogenia, diagnóstico y tratamientos disponibles",
+    "organization": "Actas Dermo-Sifiliográficas 116 (2025): 740-754",
+    "url": "https://scientiasalut.gencat.cat/bitstream/handle/11351/13978/revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf?isAllowed=y&sequence=1",
+    "license": "COMPROBAR licencia y permiso antes de incorporar",
+    "categories": [
+      "ACK"
+    ],
+    "language": "auto",
+    "modality": "mixed"
+  },
+  "02_carcinoma_basocelular.pdf": {
+    "title": "Carcinoma basocelular: actualización en diagnóstico",
+    "organization": "Dermatología Peruana 31(3) (2021): 199-204",
+    "url": "https://www.dermatolperu.org/assets/uploads/revista_cgkn_01_Articulo_revision_31-3_compressed.pdf",
+    "license": "COMPROBAR licencia y permiso antes de incorporar",
+    "categories": [
+      "BCC"
+    ],
+    "language": "auto",
+    "modality": "mixed"
+  },
+  "03_melanoma.pdf": {
+    "title": "Guía de práctica para el manejo de melanoma cutáneo primario de la Sociedad Chilena de Dermatología",
+    "organization": "Revista Chilena de Dermatología, vol. 36(4) según el registro editorial; verificar año en la referencia final",
+    "url": "https://rcderm.org/index.php/rcderm/article/download/404/383",
+    "license": "COMPROBAR licencia y permiso antes de incorporar",
+    "categories": [
+      "MEL"
+    ],
+    "language": "auto",
+    "modality": "mixed"
+  },
+  "04_carcinoma_epidermoide.pdf": {
+    "title": "Carcinoma epidermoide cutáneo: ¿alto o bajo riesgo?",
+    "organization": "Más Dermatología 44 (2023): 5-9",
+    "url": "https://dialnet.unirioja.es/descarga/articulo/9122480.pdf",
+    "license": "COMPROBAR licencia y permiso antes de incorporar",
+    "categories": [
+      "SCC"
+    ],
+    "language": "auto",
+    "modality": "mixed"
+  },
+  "05_nevos_acrales.pdf": {
+    "title": "Dermatoscopía de nevos melanocíticos congénitos acrales: Puesta al día",
+    "organization": "Revista Chilena de Dermatología 37(1), año nominal 2021; el PDF indica aceptación en 2022",
+    "url": "https://rcderm.org/index.php/rcderm/article/download/372/403",
+    "license": "COMPROBAR licencia y permiso antes de incorporar",
+    "categories": [
+      "NEV"
+    ],
+    "language": "auto",
+    "modality": "dermoscopy"
+  },
+  "06_queratosis_seborreica.pdf": {
+    "title": "Criterios dermatoscópicos clásicos y accesorios de queratosis seborreica",
+    "organization": "Dermatología Argentina 18(6) (2012): 487-489; registro web publicado en 2013",
+    "url": "https://dermatolarg.org.ar/index.php/dermatolarg/article/download/942/596",
+    "license": "COMPROBAR licencia y permiso antes de incorporar",
+    "categories": [
+      "SEK"
+    ],
+    "language": "auto",
+    "modality": "dermoscopy"
+  }
+}

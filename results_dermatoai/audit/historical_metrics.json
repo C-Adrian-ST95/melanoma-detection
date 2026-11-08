@@ -1,0 +1,2922 @@
+{
+  "baseline_logreg": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.6139817629179332,
+    "balanced_accuracy": 0.45576825135648663,
+    "macro_f1_present_classes": 0.45953873592480043,
+    "macro_f1_six_classes": 0.45953873592480043,
+    "auc_cancer": 0.8248666073810582,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.6851851851851852,
+        "recall": 0.7115384615384616,
+        "f1": 0.6981132075471698,
+        "sensitivity": 0.7115384615384616,
+        "specificity": 0.8488888888888889,
+        "auc_ovr": 0.8575,
+        "tp": 74,
+        "fp": 34,
+        "tn": 191,
+        "fn": 30
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.6666666666666666,
+        "recall": 0.7272727272727273,
+        "f1": 0.6956521739130435,
+        "sensitivity": 0.7272727272727273,
+        "specificity": 0.7884615384615384,
+        "auc_ovr": 0.8133145263827083,
+        "tp": 88,
+        "fp": 44,
+        "tn": 164,
+        "fn": 33
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.2,
+        "recall": 0.14285714285714285,
+        "f1": 0.16666666666666666,
+        "sensitivity": 0.14285714285714285,
+        "specificity": 0.9875776397515528,
+        "auc_ovr": 0.8899733806566105,
+        "tp": 1,
+        "fp": 4,
+        "tn": 318,
+        "fn": 6
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.6388888888888888,
+        "recall": 0.6571428571428571,
+        "f1": 0.647887323943662,
+        "sensitivity": 0.6571428571428571,
+        "specificity": 0.95578231292517,
+        "auc_ovr": 0.9147716229348882,
+        "tp": 23,
+        "fp": 13,
+        "tn": 281,
+        "fn": 12
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.2222222222222222,
+        "recall": 0.14285714285714285,
+        "f1": 0.17391304347826086,
+        "sensitivity": 0.14285714285714285,
+        "specificity": 0.9534883720930233,
+        "auc_ovr": 0.6976150925486474,
+        "tp": 4,
+        "fp": 14,
+        "tn": 287,
+        "fn": 24
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.4,
+        "recall": 0.35294117647058826,
+        "f1": 0.375,
+        "sensitivity": 0.35294117647058826,
+        "specificity": 0.9389830508474576,
+        "auc_ovr": 0.8051345962113661,
+        "tp": 12,
+        "fp": 18,
+        "tn": 277,
+        "fn": 22
+      }
+    ],
+    "confusion": [
+      [
+        74,
+        20,
+        0,
+        1,
+        6,
+        3
+      ],
+      [
+        16,
+        88,
+        0,
+        5,
+        5,
+        7
+      ],
+      [
+        1,
+        2,
+        1,
+        0,
+        0,
+        3
+      ],
+      [
+        2,
+        2,
+        2,
+        23,
+        1,
+        5
+      ],
+      [
+        8,
+        16,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        7,
+        4,
+        2,
+        7,
+        2,
+        12
+      ]
+    ]
+  },
+  "effb0_none_s1": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.668693009118541,
+    "balanced_accuracy": 0.5278561901556554,
+    "macro_f1_present_classes": 0.5394716170946701,
+    "macro_f1_six_classes": 0.5394716170946701,
+    "auc_cancer": 0.8761671854157403,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.656,
+        "recall": 0.7884615384615384,
+        "f1": 0.7161572052401747,
+        "sensitivity": 0.7884615384615384,
+        "specificity": 0.8088888888888889,
+        "auc_ovr": 0.8767948717948718,
+        "tp": 82,
+        "fp": 43,
+        "tn": 182,
+        "fn": 22
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.7142857142857143,
+        "recall": 0.743801652892562,
+        "f1": 0.728744939271255,
+        "sensitivity": 0.743801652892562,
+        "specificity": 0.8269230769230769,
+        "auc_ovr": 0.877999841068023,
+        "tp": 90,
+        "fp": 36,
+        "tn": 172,
+        "fn": 31
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.5,
+        "recall": 0.2857142857142857,
+        "f1": 0.36363636363636365,
+        "sensitivity": 0.2857142857142857,
+        "specificity": 0.9937888198757764,
+        "auc_ovr": 0.84472049689441,
+        "tp": 2,
+        "fp": 2,
+        "tn": 320,
+        "fn": 5
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.7297297297297297,
+        "recall": 0.7714285714285715,
+        "f1": 0.75,
+        "sensitivity": 0.7714285714285715,
+        "specificity": 0.9659863945578231,
+        "auc_ovr": 0.941642371234208,
+        "tp": 27,
+        "fp": 10,
+        "tn": 284,
+        "fn": 8
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.3333333333333333,
+        "recall": 0.10714285714285714,
+        "f1": 0.16216216216216217,
+        "sensitivity": 0.10714285714285714,
+        "specificity": 0.9800664451827242,
+        "auc_ovr": 0.6592311343141908,
+        "tp": 3,
+        "fp": 6,
+        "tn": 295,
+        "fn": 25
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.5714285714285714,
+        "recall": 0.47058823529411764,
+        "f1": 0.5161290322580645,
+        "sensitivity": 0.47058823529411764,
+        "specificity": 0.9593220338983051,
+        "auc_ovr": 0.872582253240279,
+        "tp": 16,
+        "fp": 12,
+        "tn": 283,
+        "fn": 18
+      }
+    ],
+    "confusion": [
+      [
+        82,
+        18,
+        0,
+        2,
+        1,
+        1
+      ],
+      [
+        24,
+        90,
+        1,
+        0,
+        4,
+        2
+      ],
+      [
+        1,
+        1,
+        2,
+        0,
+        0,
+        3
+      ],
+      [
+        1,
+        1,
+        1,
+        27,
+        0,
+        5
+      ],
+      [
+        12,
+        12,
+        0,
+        0,
+        3,
+        1
+      ],
+      [
+        5,
+        4,
+        0,
+        8,
+        1,
+        16
+      ]
+    ]
+  },
+  "effb0_none_s2": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.6504559270516718,
+    "balanced_accuracy": 0.515578138439101,
+    "macro_f1_present_classes": 0.5222012018482606,
+    "macro_f1_six_classes": 0.5222012018482606,
+    "auc_cancer": 0.8816140506891952,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.7008547008547008,
+        "recall": 0.7884615384615384,
+        "f1": 0.7420814479638009,
+        "sensitivity": 0.7884615384615384,
+        "specificity": 0.8444444444444444,
+        "auc_ovr": 0.884465811965812,
+        "tp": 82,
+        "fp": 35,
+        "tn": 190,
+        "fn": 22
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.7054263565891473,
+        "recall": 0.7520661157024794,
+        "f1": 0.728,
+        "sensitivity": 0.7520661157024794,
+        "specificity": 0.8173076923076923,
+        "auc_ovr": 0.8605967895740623,
+        "tp": 91,
+        "fp": 38,
+        "tn": 170,
+        "fn": 30
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.5,
+        "recall": 0.42857142857142855,
+        "f1": 0.46153846153846156,
+        "sensitivity": 0.42857142857142855,
+        "specificity": 0.9906832298136646,
+        "auc_ovr": 0.8629103815439219,
+        "tp": 3,
+        "fp": 3,
+        "tn": 319,
+        "fn": 4
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.5945945945945946,
+        "recall": 0.6285714285714286,
+        "f1": 0.6111111111111112,
+        "sensitivity": 0.6285714285714286,
+        "specificity": 0.9489795918367347,
+        "auc_ovr": 0.9375607385811467,
+        "tp": 22,
+        "fp": 15,
+        "tn": 279,
+        "fn": 13
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.2857142857142857,
+        "recall": 0.14285714285714285,
+        "f1": 0.19047619047619047,
+        "sensitivity": 0.14285714285714285,
+        "specificity": 0.9667774086378738,
+        "auc_ovr": 0.6982676791646893,
+        "tp": 4,
+        "fp": 10,
+        "tn": 291,
+        "fn": 24
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.46153846153846156,
+        "recall": 0.35294117647058826,
+        "f1": 0.4,
+        "sensitivity": 0.35294117647058826,
+        "specificity": 0.9525423728813559,
+        "auc_ovr": 0.8952143569292124,
+        "tp": 12,
+        "fp": 14,
+        "tn": 281,
+        "fn": 22
+      }
+    ],
+    "confusion": [
+      [
+        82,
+        17,
+        0,
+        0,
+        2,
+        3
+      ],
+      [
+        16,
+        91,
+        0,
+        4,
+        8,
+        2
+      ],
+      [
+        1,
+        0,
+        3,
+        1,
+        0,
+        2
+      ],
+      [
+        3,
+        2,
+        1,
+        22,
+        0,
+        7
+      ],
+      [
+        6,
+        15,
+        1,
+        2,
+        4,
+        0
+      ],
+      [
+        9,
+        4,
+        1,
+        8,
+        0,
+        12
+      ]
+    ]
+  },
+  "effb0_none_s3": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.6838905775075987,
+    "balanced_accuracy": 0.5654026232234789,
+    "macro_f1_present_classes": 0.5695999963725242,
+    "macro_f1_six_classes": 0.5695999963725242,
+    "auc_cancer": 0.8822254335260116,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.7211538461538461,
+        "recall": 0.7211538461538461,
+        "f1": 0.7211538461538461,
+        "sensitivity": 0.7211538461538461,
+        "specificity": 0.8711111111111111,
+        "auc_ovr": 0.8777777777777777,
+        "tp": 75,
+        "fp": 29,
+        "tn": 196,
+        "fn": 29
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.7,
+        "recall": 0.8099173553719008,
+        "f1": 0.7509578544061303,
+        "sensitivity": 0.8099173553719008,
+        "specificity": 0.7980769230769231,
+        "auc_ovr": 0.8812182136045772,
+        "tp": 98,
+        "fp": 42,
+        "tn": 166,
+        "fn": 23
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.5,
+        "recall": 0.42857142857142855,
+        "f1": 0.46153846153846156,
+        "sensitivity": 0.42857142857142855,
+        "specificity": 0.9906832298136646,
+        "auc_ovr": 0.7870452528837621,
+        "tp": 3,
+        "fp": 3,
+        "tn": 319,
+        "fn": 4
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.78125,
+        "recall": 0.7142857142857143,
+        "f1": 0.746268656716418,
+        "sensitivity": 0.7142857142857143,
+        "specificity": 0.9761904761904762,
+        "auc_ovr": 0.9311467444120506,
+        "tp": 25,
+        "fp": 7,
+        "tn": 287,
+        "fn": 10
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.16666666666666666,
+        "recall": 0.07142857142857142,
+        "f1": 0.1,
+        "sensitivity": 0.07142857142857142,
+        "specificity": 0.9667774086378738,
+        "auc_ovr": 0.6827242524916942,
+        "tp": 2,
+        "fp": 10,
+        "tn": 291,
+        "fn": 26
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.6285714285714286,
+        "recall": 0.6470588235294118,
+        "f1": 0.6376811594202898,
+        "sensitivity": 0.6470588235294118,
+        "specificity": 0.9559322033898305,
+        "auc_ovr": 0.8835493519441675,
+        "tp": 22,
+        "fp": 13,
+        "tn": 282,
+        "fn": 12
+      }
+    ],
+    "confusion": [
+      [
+        75,
+        20,
+        0,
+        0,
+        6,
+        3
+      ],
+      [
+        15,
+        98,
+        1,
+        2,
+        4,
+        1
+      ],
+      [
+        1,
+        0,
+        3,
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        1,
+        1,
+        25,
+        0,
+        6
+      ],
+      [
+        6,
+        18,
+        1,
+        0,
+        2,
+        1
+      ],
+      [
+        5,
+        3,
+        0,
+        4,
+        0,
+        22
+      ]
+    ]
+  },
+  "effb0_robust_s1": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.6656534954407295,
+    "balanced_accuracy": 0.5651729731943637,
+    "macro_f1_present_classes": 0.558218447904342,
+    "macro_f1_six_classes": 0.558218447904342,
+    "auc_cancer": 0.9084778420038536,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.7407407407407407,
+        "recall": 0.7692307692307693,
+        "f1": 0.7547169811320755,
+        "sensitivity": 0.7692307692307693,
+        "specificity": 0.8755555555555555,
+        "auc_ovr": 0.913974358974359,
+        "tp": 80,
+        "fp": 28,
+        "tn": 197,
+        "fn": 24
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.7083333333333334,
+        "recall": 0.7024793388429752,
+        "f1": 0.7053941908713693,
+        "sensitivity": 0.7024793388429752,
+        "specificity": 0.8317307692307693,
+        "auc_ovr": 0.8841981881754608,
+        "tp": 85,
+        "fp": 35,
+        "tn": 173,
+        "fn": 36
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.42857142857142855,
+        "recall": 0.42857142857142855,
+        "f1": 0.42857142857142855,
+        "sensitivity": 0.42857142857142855,
+        "specificity": 0.9875776397515528,
+        "auc_ovr": 0.9795918367346939,
+        "tp": 3,
+        "fp": 4,
+        "tn": 318,
+        "fn": 4
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.6842105263157895,
+        "recall": 0.7428571428571429,
+        "f1": 0.7123287671232876,
+        "sensitivity": 0.7428571428571429,
+        "specificity": 0.9591836734693877,
+        "auc_ovr": 0.9528668610301263,
+        "tp": 26,
+        "fp": 12,
+        "tn": 282,
+        "fn": 9
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.09523809523809523,
+        "recall": 0.07142857142857142,
+        "f1": 0.08163265306122448,
+        "sensitivity": 0.07142857142857142,
+        "specificity": 0.9368770764119602,
+        "auc_ovr": 0.773077835785477,
+        "tp": 2,
+        "fp": 19,
+        "tn": 282,
+        "fn": 26
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.6571428571428571,
+        "recall": 0.6764705882352942,
+        "f1": 0.6666666666666666,
+        "sensitivity": 0.6764705882352942,
+        "specificity": 0.9593220338983051,
+        "auc_ovr": 0.9509471585244266,
+        "tp": 23,
+        "fp": 12,
+        "tn": 283,
+        "fn": 11
+      }
+    ],
+    "confusion": [
+      [
+        80,
+        15,
+        1,
+        0,
+        5,
+        3
+      ],
+      [
+        18,
+        85,
+        0,
+        4,
+        13,
+        1
+      ],
+      [
+        0,
+        0,
+        3,
+        1,
+        0,
+        3
+      ],
+      [
+        2,
+        2,
+        0,
+        26,
+        0,
+        5
+      ],
+      [
+        7,
+        17,
+        1,
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        1,
+        2,
+        6,
+        1,
+        23
+      ]
+    ]
+  },
+  "effb0_robust_s2": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.6990881458966566,
+    "balanced_accuracy": 0.6293897501785203,
+    "macro_f1_present_classes": 0.6206061642220441,
+    "macro_f1_six_classes": 0.6206061642220441,
+    "auc_cancer": 0.9082925744775456,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.7403846153846154,
+        "recall": 0.7403846153846154,
+        "f1": 0.7403846153846154,
+        "sensitivity": 0.7403846153846154,
+        "specificity": 0.88,
+        "auc_ovr": 0.9069230769230769,
+        "tp": 77,
+        "fp": 27,
+        "tn": 198,
+        "fn": 27
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.7678571428571429,
+        "recall": 0.7107438016528925,
+        "f1": 0.7381974248927039,
+        "sensitivity": 0.7107438016528925,
+        "specificity": 0.875,
+        "auc_ovr": 0.9040646853146853,
+        "tp": 86,
+        "fp": 26,
+        "tn": 182,
+        "fn": 35
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.5,
+        "recall": 0.42857142857142855,
+        "f1": 0.46153846153846156,
+        "sensitivity": 0.42857142857142855,
+        "specificity": 0.9906832298136646,
+        "auc_ovr": 0.9507542147293699,
+        "tp": 3,
+        "fp": 3,
+        "tn": 319,
+        "fn": 4
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8,
+        "sensitivity": 0.8,
+        "specificity": 0.9761904761904762,
+        "auc_ovr": 0.966958211856171,
+        "tp": 28,
+        "fp": 7,
+        "tn": 287,
+        "fn": 7
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.21428571428571427,
+        "recall": 0.21428571428571427,
+        "f1": 0.21428571428571427,
+        "sensitivity": 0.21428571428571427,
+        "specificity": 0.9269102990033222,
+        "auc_ovr": 0.7123872804935929,
+        "tp": 6,
+        "fp": 22,
+        "tn": 279,
+        "fn": 22
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.6818181818181818,
+        "recall": 0.8823529411764706,
+        "f1": 0.7692307692307693,
+        "sensitivity": 0.8823529411764706,
+        "specificity": 0.9525423728813559,
+        "auc_ovr": 0.9649052841475573,
+        "tp": 30,
+        "fp": 14,
+        "tn": 281,
+        "fn": 4
+      }
+    ],
+    "confusion": [
+      [
+        77,
+        13,
+        1,
+        0,
+        8,
+        5
+      ],
+      [
+        17,
+        86,
+        0,
+        4,
+        14,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        1,
+        0,
+        3
+      ],
+      [
+        1,
+        0,
+        2,
+        28,
+        0,
+        4
+      ],
+      [
+        6,
+        13,
+        0,
+        1,
+        6,
+        2
+      ],
+      [
+        3,
+        0,
+        0,
+        1,
+        0,
+        30
+      ]
+    ]
+  },
+  "effb0_robust_s3": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.6413373860182371,
+    "balanced_accuracy": 0.5706727319026784,
+    "macro_f1_present_classes": 0.5573316555769584,
+    "macro_f1_six_classes": 0.5573316555769584,
+    "auc_cancer": 0.9034756187935378,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.7222222222222222,
+        "recall": 0.75,
+        "f1": 0.7358490566037735,
+        "sensitivity": 0.75,
+        "specificity": 0.8666666666666667,
+        "auc_ovr": 0.8867948717948718,
+        "tp": 78,
+        "fp": 30,
+        "tn": 195,
+        "fn": 26
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.7731958762886598,
+        "recall": 0.6198347107438017,
+        "f1": 0.6880733944954128,
+        "sensitivity": 0.6198347107438017,
+        "specificity": 0.8942307692307693,
+        "auc_ovr": 0.8859067069294342,
+        "tp": 75,
+        "fp": 22,
+        "tn": 186,
+        "fn": 46
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.5,
+        "recall": 0.42857142857142855,
+        "f1": 0.46153846153846156,
+        "sensitivity": 0.42857142857142855,
+        "specificity": 0.9906832298136646,
+        "auc_ovr": 0.9631765749778173,
+        "tp": 3,
+        "fp": 3,
+        "tn": 319,
+        "fn": 4
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.6222222222222222,
+        "recall": 0.8,
+        "f1": 0.7,
+        "sensitivity": 0.8,
+        "specificity": 0.9421768707482994,
+        "auc_ovr": 0.9600583090379008,
+        "tp": 28,
+        "fp": 17,
+        "tn": 277,
+        "fn": 7
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.15151515151515152,
+        "recall": 0.17857142857142858,
+        "f1": 0.16393442622950818,
+        "sensitivity": 0.17857142857142858,
+        "specificity": 0.9069767441860465,
+        "auc_ovr": 0.7264475557664927,
+        "tp": 5,
+        "fp": 28,
+        "tn": 273,
+        "fn": 23
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.55,
+        "recall": 0.6470588235294118,
+        "f1": 0.5945945945945946,
+        "sensitivity": 0.6470588235294118,
+        "specificity": 0.9389830508474576,
+        "auc_ovr": 0.9238285144566301,
+        "tp": 22,
+        "fp": 18,
+        "tn": 277,
+        "fn": 12
+      }
+    ],
+    "confusion": [
+      [
+        78,
+        8,
+        1,
+        5,
+        7,
+        5
+      ],
+      [
+        20,
+        75,
+        0,
+        3,
+        20,
+        3
+      ],
+      [
+        0,
+        0,
+        3,
+        1,
+        0,
+        3
+      ],
+      [
+        0,
+        1,
+        1,
+        28,
+        0,
+        5
+      ],
+      [
+        8,
+        13,
+        0,
+        0,
+        5,
+        2
+      ],
+      [
+        2,
+        0,
+        1,
+        8,
+        1,
+        22
+      ]
+    ]
+  },
+  "effb0_standard_s1": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.6960486322188449,
+    "balanced_accuracy": 0.6041554924576316,
+    "macro_f1_present_classes": 0.6006651621484157,
+    "macro_f1_six_classes": 0.6006651621484157,
+    "auc_cancer": 0.9150548391877872,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.7033898305084746,
+        "recall": 0.7980769230769231,
+        "f1": 0.7477477477477478,
+        "sensitivity": 0.7980769230769231,
+        "specificity": 0.8444444444444444,
+        "auc_ovr": 0.9155555555555555,
+        "tp": 83,
+        "fp": 35,
+        "tn": 190,
+        "fn": 21
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.7520661157024794,
+        "recall": 0.7520661157024794,
+        "f1": 0.7520661157024794,
+        "sensitivity": 0.7520661157024794,
+        "specificity": 0.8557692307692307,
+        "auc_ovr": 0.900230451366815,
+        "tp": 91,
+        "fp": 30,
+        "tn": 178,
+        "fn": 30
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.5714285714285714,
+        "recall": 0.5714285714285714,
+        "f1": 0.5714285714285714,
+        "sensitivity": 0.5714285714285714,
+        "specificity": 0.9906832298136646,
+        "auc_ovr": 0.956078083407276,
+        "tp": 4,
+        "fp": 3,
+        "tn": 319,
+        "fn": 3
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.7027027027027027,
+        "recall": 0.7428571428571429,
+        "f1": 0.7222222222222222,
+        "sensitivity": 0.7428571428571429,
+        "specificity": 0.9625850340136054,
+        "auc_ovr": 0.9589893100097182,
+        "tp": 26,
+        "fp": 11,
+        "tn": 283,
+        "fn": 9
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.4,
+        "recall": 0.14285714285714285,
+        "f1": 0.21052631578947367,
+        "sensitivity": 0.14285714285714285,
+        "specificity": 0.9800664451827242,
+        "auc_ovr": 0.7246677740863787,
+        "tp": 4,
+        "fp": 6,
+        "tn": 295,
+        "fn": 24
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.5833333333333334,
+        "recall": 0.6176470588235294,
+        "f1": 0.6,
+        "sensitivity": 0.6176470588235294,
+        "specificity": 0.9491525423728814,
+        "auc_ovr": 0.9316051844466601,
+        "tp": 21,
+        "fp": 15,
+        "tn": 280,
+        "fn": 13
+      }
+    ],
+    "confusion": [
+      [
+        83,
+        15,
+        0,
+        0,
+        1,
+        5
+      ],
+      [
+        20,
+        91,
+        0,
+        4,
+        5,
+        1
+      ],
+      [
+        0,
+        0,
+        4,
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        1,
+        26,
+        0,
+        5
+      ],
+      [
+        8,
+        13,
+        0,
+        0,
+        4,
+        3
+      ],
+      [
+        5,
+        1,
+        2,
+        5,
+        0,
+        21
+      ]
+    ]
+  },
+  "effb0_standard_s2": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.7264437689969605,
+    "balanced_accuracy": 0.6273779918833394,
+    "macro_f1_present_classes": 0.6425864776611045,
+    "macro_f1_six_classes": 0.6425864776611045,
+    "auc_cancer": 0.8929338965466134,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.7731958762886598,
+        "recall": 0.7211538461538461,
+        "f1": 0.746268656716418,
+        "sensitivity": 0.7211538461538461,
+        "specificity": 0.9022222222222223,
+        "auc_ovr": 0.8969017094017093,
+        "tp": 75,
+        "fp": 22,
+        "tn": 203,
+        "fn": 29
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.7266187050359713,
+        "recall": 0.8347107438016529,
+        "f1": 0.7769230769230769,
+        "sensitivity": 0.8347107438016529,
+        "specificity": 0.8173076923076923,
+        "auc_ovr": 0.8876748251748252,
+        "tp": 101,
+        "fp": 38,
+        "tn": 170,
+        "fn": 20
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.75,
+        "recall": 0.42857142857142855,
+        "f1": 0.5454545454545454,
+        "sensitivity": 0.42857142857142855,
+        "specificity": 0.9968944099378882,
+        "auc_ovr": 0.8837622005323869,
+        "tp": 3,
+        "fp": 1,
+        "tn": 321,
+        "fn": 4
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.7714285714285715,
+        "recall": 0.7714285714285715,
+        "f1": 0.7714285714285715,
+        "sensitivity": 0.7714285714285715,
+        "specificity": 0.9727891156462585,
+        "auc_ovr": 0.9699708454810495,
+        "tp": 27,
+        "fp": 8,
+        "tn": 286,
+        "fn": 8
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.42857142857142855,
+        "recall": 0.21428571428571427,
+        "f1": 0.2857142857142857,
+        "sensitivity": 0.21428571428571427,
+        "specificity": 0.973421926910299,
+        "auc_ovr": 0.7428808732795444,
+        "tp": 6,
+        "fp": 8,
+        "tn": 293,
+        "fn": 22
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.675,
+        "recall": 0.7941176470588235,
+        "f1": 0.7297297297297297,
+        "sensitivity": 0.7941176470588235,
+        "specificity": 0.9559322033898305,
+        "auc_ovr": 0.9610169491525424,
+        "tp": 27,
+        "fp": 13,
+        "tn": 282,
+        "fn": 7
+      }
+    ],
+    "confusion": [
+      [
+        75,
+        20,
+        0,
+        1,
+        2,
+        6
+      ],
+      [
+        11,
+        101,
+        0,
+        3,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        1,
+        0,
+        3
+      ],
+      [
+        2,
+        2,
+        1,
+        27,
+        0,
+        3
+      ],
+      [
+        6,
+        15,
+        0,
+        0,
+        6,
+        1
+      ],
+      [
+        3,
+        1,
+        0,
+        3,
+        0,
+        27
+      ]
+    ]
+  },
+  "effb0_standard_s3": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.6413373860182371,
+    "balanced_accuracy": 0.5357708913190197,
+    "macro_f1_present_classes": 0.5451800865740083,
+    "macro_f1_six_classes": 0.5451800865740083,
+    "auc_cancer": 0.8866718541574032,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.7373737373737373,
+        "recall": 0.7019230769230769,
+        "f1": 0.7192118226600985,
+        "sensitivity": 0.7019230769230769,
+        "specificity": 0.8844444444444445,
+        "auc_ovr": 0.8866452991452992,
+        "tp": 73,
+        "fp": 26,
+        "tn": 199,
+        "fn": 31
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.7304347826086957,
+        "recall": 0.6942148760330579,
+        "f1": 0.711864406779661,
+        "sensitivity": 0.6942148760330579,
+        "specificity": 0.8509615384615384,
+        "auc_ovr": 0.8749006675143038,
+        "tp": 84,
+        "fp": 31,
+        "tn": 177,
+        "fn": 37
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 1.0,
+        "recall": 0.2857142857142857,
+        "f1": 0.4444444444444444,
+        "sensitivity": 0.2857142857142857,
+        "specificity": 1.0,
+        "auc_ovr": 0.9472049689440994,
+        "tp": 2,
+        "fp": 0,
+        "tn": 322,
+        "fn": 5
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.6666666666666666,
+        "recall": 0.7428571428571429,
+        "f1": 0.7027027027027027,
+        "sensitivity": 0.7428571428571429,
+        "specificity": 0.95578231292517,
+        "auc_ovr": 0.9258503401360544,
+        "tp": 26,
+        "fp": 13,
+        "tn": 281,
+        "fn": 9
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.14285714285714285,
+        "recall": 0.14285714285714285,
+        "f1": 0.14285714285714285,
+        "sensitivity": 0.14285714285714285,
+        "specificity": 0.920265780730897,
+        "auc_ovr": 0.705030849549122,
+        "tp": 4,
+        "fp": 24,
+        "tn": 277,
+        "fn": 24
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.4782608695652174,
+        "recall": 0.6470588235294118,
+        "f1": 0.55,
+        "sensitivity": 0.6470588235294118,
+        "specificity": 0.9186440677966101,
+        "auc_ovr": 0.9115653040877367,
+        "tp": 22,
+        "fp": 24,
+        "tn": 271,
+        "fn": 12
+      }
+    ],
+    "confusion": [
+      [
+        73,
+        15,
+        0,
+        0,
+        7,
+        9
+      ],
+      [
+        13,
+        84,
+        0,
+        4,
+        16,
+        4
+      ],
+      [
+        0,
+        0,
+        2,
+        2,
+        0,
+        3
+      ],
+      [
+        4,
+        1,
+        0,
+        26,
+        0,
+        4
+      ],
+      [
+        3,
+        15,
+        0,
+        2,
+        4,
+        4
+      ],
+      [
+        6,
+        0,
+        0,
+        5,
+        1,
+        22
+      ]
+    ]
+  },
+  "ham_effb0_standard_s1": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.303951367781155,
+    "balanced_accuracy": 0.34661610670968956,
+    "macro_f1_present_classes": 0.26636969579430747,
+    "macro_f1_six_classes": 0.26636969579430747,
+    "auc_cancer": 0.7548169556840079,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.09090909090909091,
+        "recall": 0.009615384615384616,
+        "f1": 0.017391304347826087,
+        "sensitivity": 0.009615384615384616,
+        "specificity": 0.9555555555555556,
+        "auc_ovr": 0.3523290598290598,
+        "tp": 1,
+        "fp": 10,
+        "tn": 215,
+        "fn": 103
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.5054945054945055,
+        "recall": 0.38016528925619836,
+        "f1": 0.4339622641509434,
+        "sensitivity": 0.38016528925619836,
+        "specificity": 0.7836538461538461,
+        "auc_ovr": 0.669083757151939,
+        "tp": 46,
+        "fp": 45,
+        "tn": 163,
+        "fn": 75
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.1,
+        "recall": 0.14285714285714285,
+        "f1": 0.11764705882352941,
+        "sensitivity": 0.14285714285714285,
+        "specificity": 0.9720496894409938,
+        "auc_ovr": 0.5536823425022183,
+        "tp": 1,
+        "fp": 9,
+        "tn": 313,
+        "fn": 6
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.5106382978723404,
+        "recall": 0.6857142857142857,
+        "f1": 0.5853658536585366,
+        "sensitivity": 0.6857142857142857,
+        "specificity": 0.9217687074829932,
+        "auc_ovr": 0.8461613216715258,
+        "tp": 24,
+        "fp": 23,
+        "tn": 271,
+        "fn": 11
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.14634146341463414,
+        "recall": 0.21428571428571427,
+        "f1": 0.17391304347826086,
+        "sensitivity": 0.21428571428571427,
+        "specificity": 0.8837209302325582,
+        "auc_ovr": 0.6785121025154248,
+        "tp": 6,
+        "fp": 35,
+        "tn": 266,
+        "fn": 22
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.17054263565891473,
+        "recall": 0.6470588235294118,
+        "f1": 0.26993865030674846,
+        "sensitivity": 0.6470588235294118,
+        "specificity": 0.6372881355932203,
+        "auc_ovr": 0.692023928215354,
+        "tp": 22,
+        "fp": 107,
+        "tn": 188,
+        "fn": 12
+      }
+    ],
+    "confusion": [
+      [
+        1,
+        25,
+        4,
+        3,
+        5,
+        66
+      ],
+      [
+        9,
+        46,
+        3,
+        9,
+        27,
+        27
+      ],
+      [
+        0,
+        1,
+        1,
+        4,
+        0,
+        1
+      ],
+      [
+        1,
+        3,
+        0,
+        24,
+        0,
+        7
+      ],
+      [
+        0,
+        12,
+        2,
+        2,
+        6,
+        6
+      ],
+      [
+        0,
+        4,
+        0,
+        5,
+        3,
+        22
+      ]
+    ]
+  },
+  "vits16_none_s1": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.7537993920972644,
+    "balanced_accuracy": 0.6450455070775927,
+    "macro_f1_present_classes": 0.6684788452006507,
+    "macro_f1_six_classes": 0.6684788452006507,
+    "auc_cancer": 0.9319327108344448,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.7850467289719626,
+        "recall": 0.8076923076923077,
+        "f1": 0.7962085308056872,
+        "sensitivity": 0.8076923076923077,
+        "specificity": 0.8977777777777778,
+        "auc_ovr": 0.9393162393162393,
+        "tp": 84,
+        "fp": 23,
+        "tn": 202,
+        "fn": 20
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.7352941176470589,
+        "recall": 0.8264462809917356,
+        "f1": 0.7782101167315175,
+        "sensitivity": 0.8264462809917356,
+        "specificity": 0.8269230769230769,
+        "auc_ovr": 0.9107795613477432,
+        "tp": 100,
+        "fp": 36,
+        "tn": 172,
+        "fn": 21
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.75,
+        "recall": 0.42857142857142855,
+        "f1": 0.5454545454545454,
+        "sensitivity": 0.42857142857142855,
+        "specificity": 0.9968944099378882,
+        "auc_ovr": 0.9884649511978705,
+        "tp": 3,
+        "fp": 1,
+        "tn": 321,
+        "fn": 4
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.8529411764705882,
+        "recall": 0.8285714285714286,
+        "f1": 0.8405797101449275,
+        "sensitivity": 0.8285714285714286,
+        "specificity": 0.9829931972789115,
+        "auc_ovr": 0.9829931972789115,
+        "tp": 29,
+        "fp": 5,
+        "tn": 289,
+        "fn": 6
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.42857142857142855,
+        "recall": 0.21428571428571427,
+        "f1": 0.2857142857142857,
+        "sensitivity": 0.21428571428571427,
+        "specificity": 0.973421926910299,
+        "auc_ovr": 0.8416587565258662,
+        "tp": 6,
+        "fp": 8,
+        "tn": 293,
+        "fn": 22
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.7647058823529411,
+        "recall": 0.7647058823529411,
+        "f1": 0.7647058823529411,
+        "sensitivity": 0.7647058823529411,
+        "specificity": 0.9728813559322034,
+        "auc_ovr": 0.9468594217347956,
+        "tp": 26,
+        "fp": 8,
+        "tn": 287,
+        "fn": 8
+      }
+    ],
+    "confusion": [
+      [
+        84,
+        16,
+        0,
+        0,
+        3,
+        1
+      ],
+      [
+        17,
+        100,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        1,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        29,
+        0,
+        3
+      ],
+      [
+        4,
+        16,
+        0,
+        0,
+        6,
+        2
+      ],
+      [
+        2,
+        1,
+        0,
+        4,
+        1,
+        26
+      ]
+    ]
+  },
+  "vits16_none_s2": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.756838905775076,
+    "balanced_accuracy": 0.6660706494931093,
+    "macro_f1_present_classes": 0.6753979907655365,
+    "macro_f1_six_classes": 0.6753979907655365,
+    "auc_cancer": 0.918482288424485,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.82,
+        "recall": 0.7884615384615384,
+        "f1": 0.803921568627451,
+        "sensitivity": 0.7884615384615384,
+        "specificity": 0.92,
+        "auc_ovr": 0.9286324786324787,
+        "tp": 82,
+        "fp": 18,
+        "tn": 207,
+        "fn": 22
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.762962962962963,
+        "recall": 0.8512396694214877,
+        "f1": 0.8046875,
+        "sensitivity": 0.8512396694214877,
+        "specificity": 0.8461538461538461,
+        "auc_ovr": 0.9098458359821997,
+        "tp": 103,
+        "fp": 32,
+        "tn": 176,
+        "fn": 18
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.6666666666666666,
+        "recall": 0.5714285714285714,
+        "f1": 0.6153846153846154,
+        "sensitivity": 0.5714285714285714,
+        "specificity": 0.9937888198757764,
+        "auc_ovr": 0.9804791481810116,
+        "tp": 4,
+        "fp": 2,
+        "tn": 320,
+        "fn": 3
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.7567567567567568,
+        "recall": 0.8,
+        "f1": 0.7777777777777778,
+        "sensitivity": 0.8,
+        "specificity": 0.9693877551020408,
+        "auc_ovr": 0.9812439261418853,
+        "tp": 28,
+        "fp": 9,
+        "tn": 285,
+        "fn": 7
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.3888888888888889,
+        "recall": 0.25,
+        "f1": 0.30434782608695654,
+        "sensitivity": 0.25,
+        "specificity": 0.9634551495016611,
+        "auc_ovr": 0.7637043189368771,
+        "tp": 7,
+        "fp": 11,
+        "tn": 290,
+        "fn": 21
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.7575757575757576,
+        "recall": 0.7352941176470589,
+        "f1": 0.746268656716418,
+        "sensitivity": 0.7352941176470589,
+        "specificity": 0.9728813559322034,
+        "auc_ovr": 0.9532402791625124,
+        "tp": 25,
+        "fp": 8,
+        "tn": 287,
+        "fn": 9
+      }
+    ],
+    "confusion": [
+      [
+        82,
+        13,
+        0,
+        1,
+        6,
+        2
+      ],
+      [
+        13,
+        103,
+        0,
+        2,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        1,
+        0,
+        2
+      ],
+      [
+        0,
+        4,
+        1,
+        28,
+        0,
+        2
+      ],
+      [
+        5,
+        13,
+        0,
+        1,
+        7,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        4,
+        2,
+        25
+      ]
+    ]
+  },
+  "vits16_none_s3": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.7629179331306991,
+    "balanced_accuracy": 0.6095430416286032,
+    "macro_f1_present_classes": 0.6406178670731408,
+    "macro_f1_six_classes": 0.6406178670731408,
+    "auc_cancer": 0.9297095005187491,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.8316831683168316,
+        "recall": 0.8076923076923077,
+        "f1": 0.8195121951219512,
+        "sensitivity": 0.8076923076923077,
+        "specificity": 0.9244444444444444,
+        "auc_ovr": 0.9288247863247864,
+        "tp": 84,
+        "fp": 17,
+        "tn": 208,
+        "fn": 20
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.7465753424657534,
+        "recall": 0.9008264462809917,
+        "f1": 0.8164794007490637,
+        "sensitivity": 0.9008264462809917,
+        "specificity": 0.8221153846153846,
+        "auc_ovr": 0.921388270820089,
+        "tp": 109,
+        "fp": 37,
+        "tn": 171,
+        "fn": 12
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 1.0,
+        "recall": 0.2857142857142857,
+        "f1": 0.4444444444444444,
+        "sensitivity": 0.2857142857142857,
+        "specificity": 1.0,
+        "auc_ovr": 0.9862466725820763,
+        "tp": 2,
+        "fp": 0,
+        "tn": 322,
+        "fn": 5
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.7878787878787878,
+        "recall": 0.7428571428571429,
+        "f1": 0.7647058823529411,
+        "sensitivity": 0.7428571428571429,
+        "specificity": 0.9761904761904762,
+        "auc_ovr": 0.963022351797862,
+        "tp": 26,
+        "fp": 7,
+        "tn": 287,
+        "fn": 9
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.46153846153846156,
+        "recall": 0.21428571428571427,
+        "f1": 0.2926829268292683,
+        "sensitivity": 0.21428571428571427,
+        "specificity": 0.9767441860465116,
+        "auc_ovr": 0.7672045562411011,
+        "tp": 6,
+        "fp": 7,
+        "tn": 294,
+        "fn": 22
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.7058823529411765,
+        "recall": 0.7058823529411765,
+        "f1": 0.7058823529411765,
+        "sensitivity": 0.7058823529411765,
+        "specificity": 0.9661016949152542,
+        "auc_ovr": 0.9574277168494516,
+        "tp": 24,
+        "fp": 10,
+        "tn": 285,
+        "fn": 10
+      }
+    ],
+    "confusion": [
+      [
+        84,
+        16,
+        0,
+        0,
+        2,
+        2
+      ],
+      [
+        9,
+        109,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        1,
+        0,
+        2,
+        2,
+        0,
+        2
+      ],
+      [
+        1,
+        4,
+        0,
+        26,
+        0,
+        4
+      ],
+      [
+        4,
+        16,
+        0,
+        0,
+        6,
+        2
+      ],
+      [
+        2,
+        1,
+        0,
+        5,
+        2,
+        24
+      ]
+    ]
+  },
+  "vits16_robust_s1": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.7386018237082067,
+    "balanced_accuracy": 0.6967821616885788,
+    "macro_f1_present_classes": 0.6658096571980759,
+    "macro_f1_six_classes": 0.6658096571980759,
+    "auc_cancer": 0.9288572698977324,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.8279569892473119,
+        "recall": 0.7403846153846154,
+        "f1": 0.7817258883248731,
+        "sensitivity": 0.7403846153846154,
+        "specificity": 0.9288888888888889,
+        "auc_ovr": 0.9304700854700854,
+        "tp": 77,
+        "fp": 16,
+        "tn": 209,
+        "fn": 27
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.776,
+        "recall": 0.8016528925619835,
+        "f1": 0.7886178861788617,
+        "sensitivity": 0.8016528925619835,
+        "specificity": 0.8653846153846154,
+        "auc_ovr": 0.9197592180546725,
+        "tp": 97,
+        "fp": 28,
+        "tn": 180,
+        "fn": 24
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.4166666666666667,
+        "recall": 0.7142857142857143,
+        "f1": 0.5263157894736842,
+        "sensitivity": 0.7142857142857143,
+        "specificity": 0.9782608695652174,
+        "auc_ovr": 0.9804791481810116,
+        "tp": 5,
+        "fp": 7,
+        "tn": 315,
+        "fn": 2
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.8928571428571429,
+        "recall": 0.7142857142857143,
+        "f1": 0.7936507936507936,
+        "sensitivity": 0.7142857142857143,
+        "specificity": 0.9897959183673469,
+        "auc_ovr": 0.9750242954324586,
+        "tp": 25,
+        "fp": 3,
+        "tn": 291,
+        "fn": 10
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.38461538461538464,
+        "recall": 0.35714285714285715,
+        "f1": 0.37037037037037035,
+        "sensitivity": 0.35714285714285715,
+        "specificity": 0.946843853820598,
+        "auc_ovr": 0.8297935453251067,
+        "tp": 10,
+        "fp": 16,
+        "tn": 285,
+        "fn": 18
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.6444444444444445,
+        "recall": 0.8529411764705882,
+        "f1": 0.7341772151898734,
+        "sensitivity": 0.8529411764705882,
+        "specificity": 0.9457627118644067,
+        "auc_ovr": 0.9553339980059821,
+        "tp": 29,
+        "fp": 16,
+        "tn": 279,
+        "fn": 5
+      }
+    ],
+    "confusion": [
+      [
+        77,
+        17,
+        1,
+        0,
+        3,
+        6
+      ],
+      [
+        10,
+        97,
+        2,
+        1,
+        11,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        2,
+        25,
+        0,
+        7
+      ],
+      [
+        5,
+        10,
+        1,
+        1,
+        10,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        2,
+        29
+      ]
+    ]
+  },
+  "vits16_robust_s2": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.7537993920972644,
+    "balanced_accuracy": 0.6666523538849741,
+    "macro_f1_present_classes": 0.6881872968982088,
+    "macro_f1_six_classes": 0.6881872968982088,
+    "auc_cancer": 0.9295242329924411,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.7522123893805309,
+        "recall": 0.8173076923076923,
+        "f1": 0.783410138248848,
+        "sensitivity": 0.8173076923076923,
+        "specificity": 0.8755555555555555,
+        "auc_ovr": 0.9258119658119656,
+        "tp": 85,
+        "fp": 28,
+        "tn": 197,
+        "fn": 19
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.784,
+        "recall": 0.8099173553719008,
+        "f1": 0.7967479674796748,
+        "sensitivity": 0.8099173553719008,
+        "specificity": 0.8701923076923077,
+        "auc_ovr": 0.917931500317864,
+        "tp": 98,
+        "fp": 27,
+        "tn": 181,
+        "fn": 23
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 1.0,
+        "recall": 0.5714285714285714,
+        "f1": 0.7272727272727273,
+        "sensitivity": 0.5714285714285714,
+        "specificity": 1.0,
+        "auc_ovr": 0.997338065661047,
+        "tp": 4,
+        "fp": 0,
+        "tn": 322,
+        "fn": 3
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.8285714285714286,
+        "recall": 0.8285714285714286,
+        "f1": 0.8285714285714286,
+        "sensitivity": 0.8285714285714286,
+        "specificity": 0.9795918367346939,
+        "auc_ovr": 0.9734693877551021,
+        "tp": 29,
+        "fp": 6,
+        "tn": 288,
+        "fn": 6
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.3333333333333333,
+        "recall": 0.17857142857142858,
+        "f1": 0.23255813953488372,
+        "sensitivity": 0.17857142857142858,
+        "specificity": 0.9667774086378738,
+        "auc_ovr": 0.797282866635026,
+        "tp": 5,
+        "fp": 10,
+        "tn": 291,
+        "fn": 23
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.7297297297297297,
+        "recall": 0.7941176470588235,
+        "f1": 0.7605633802816901,
+        "sensitivity": 0.7941176470588235,
+        "specificity": 0.9661016949152542,
+        "auc_ovr": 0.9693918245264208,
+        "tp": 27,
+        "fp": 10,
+        "tn": 285,
+        "fn": 7
+      }
+    ],
+    "confusion": [
+      [
+        85,
+        14,
+        0,
+        0,
+        4,
+        1
+      ],
+      [
+        15,
+        98,
+        0,
+        3,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        0,
+        29,
+        0,
+        5
+      ],
+      [
+        8,
+        13,
+        0,
+        0,
+        5,
+        2
+      ],
+      [
+        4,
+        0,
+        0,
+        2,
+        1,
+        27
+      ]
+    ]
+  },
+  "vits16_robust_s3": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.7173252279635258,
+    "balanced_accuracy": 0.6481749533888571,
+    "macro_f1_present_classes": 0.6600147876405477,
+    "macro_f1_six_classes": 0.6600147876405477,
+    "auc_cancer": 0.9191492515191937,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.6618705035971223,
+        "recall": 0.8846153846153846,
+        "f1": 0.757201646090535,
+        "sensitivity": 0.8846153846153846,
+        "specificity": 0.7911111111111111,
+        "auc_ovr": 0.926025641025641,
+        "tp": 92,
+        "fp": 47,
+        "tn": 178,
+        "fn": 12
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.8080808080808081,
+        "recall": 0.6611570247933884,
+        "f1": 0.7272727272727273,
+        "sensitivity": 0.6611570247933884,
+        "specificity": 0.9086538461538461,
+        "auc_ovr": 0.9196797520661157,
+        "tp": 80,
+        "fp": 19,
+        "tn": 189,
+        "fn": 41
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.8,
+        "recall": 0.5714285714285714,
+        "f1": 0.6666666666666666,
+        "sensitivity": 0.5714285714285714,
+        "specificity": 0.9968944099378882,
+        "auc_ovr": 0.9858030168589175,
+        "tp": 4,
+        "fp": 1,
+        "tn": 321,
+        "fn": 3
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.7837837837837838,
+        "recall": 0.8285714285714286,
+        "f1": 0.8055555555555556,
+        "sensitivity": 0.8285714285714286,
+        "specificity": 0.9727891156462585,
+        "auc_ovr": 0.9838678328474247,
+        "tp": 29,
+        "fp": 8,
+        "tn": 286,
+        "fn": 6
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.3125,
+        "recall": 0.17857142857142858,
+        "f1": 0.22727272727272727,
+        "sensitivity": 0.17857142857142858,
+        "specificity": 0.9634551495016611,
+        "auc_ovr": 0.7731964878974845,
+        "tp": 5,
+        "fp": 11,
+        "tn": 290,
+        "fn": 23
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.7878787878787878,
+        "recall": 0.7647058823529411,
+        "f1": 0.7761194029850746,
+        "sensitivity": 0.7647058823529411,
+        "specificity": 0.976271186440678,
+        "auc_ovr": 0.9627118644067797,
+        "tp": 26,
+        "fp": 7,
+        "tn": 288,
+        "fn": 8
+      }
+    ],
+    "confusion": [
+      [
+        92,
+        9,
+        0,
+        0,
+        2,
+        1
+      ],
+      [
+        30,
+        80,
+        0,
+        3,
+        8,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        2,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        29,
+        0,
+        4
+      ],
+      [
+        14,
+        8,
+        0,
+        0,
+        5,
+        1
+      ],
+      [
+        2,
+        2,
+        0,
+        3,
+        1,
+        26
+      ]
+    ]
+  },
+  "vits16_standard_s1": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.7629179331306991,
+    "balanced_accuracy": 0.6758196126511636,
+    "macro_f1_present_classes": 0.7000309300759283,
+    "macro_f1_six_classes": 0.7000309300759283,
+    "auc_cancer": 0.9374536831184231,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.7980769230769231,
+        "recall": 0.7980769230769231,
+        "f1": 0.7980769230769231,
+        "sensitivity": 0.7980769230769231,
+        "specificity": 0.9066666666666666,
+        "auc_ovr": 0.9383760683760684,
+        "tp": 83,
+        "fp": 21,
+        "tn": 204,
+        "fn": 21
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.7669172932330827,
+        "recall": 0.8429752066115702,
+        "f1": 0.8031496062992126,
+        "sensitivity": 0.8429752066115702,
+        "specificity": 0.8509615384615384,
+        "auc_ovr": 0.9163024475524475,
+        "tp": 102,
+        "fp": 31,
+        "tn": 177,
+        "fn": 19
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 1.0,
+        "recall": 0.5714285714285714,
+        "f1": 0.7272727272727273,
+        "sensitivity": 0.5714285714285714,
+        "specificity": 1.0,
+        "auc_ovr": 0.9946761313220941,
+        "tp": 4,
+        "fp": 0,
+        "tn": 322,
+        "fn": 3
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.7692307692307693,
+        "recall": 0.8571428571428571,
+        "f1": 0.8108108108108109,
+        "sensitivity": 0.8571428571428571,
+        "specificity": 0.9693877551020408,
+        "auc_ovr": 0.977259475218659,
+        "tp": 30,
+        "fp": 9,
+        "tn": 285,
+        "fn": 5
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.4666666666666667,
+        "recall": 0.25,
+        "f1": 0.32558139534883723,
+        "sensitivity": 0.25,
+        "specificity": 0.973421926910299,
+        "auc_ovr": 0.8099786426198388,
+        "tp": 7,
+        "fp": 8,
+        "tn": 293,
+        "fn": 21
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.7352941176470589,
+        "recall": 0.7352941176470589,
+        "f1": 0.7352941176470589,
+        "sensitivity": 0.7352941176470589,
+        "specificity": 0.9694915254237289,
+        "auc_ovr": 0.964506480558325,
+        "tp": 25,
+        "fp": 9,
+        "tn": 286,
+        "fn": 9
+      }
+    ],
+    "confusion": [
+      [
+        83,
+        15,
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        14,
+        102,
+        0,
+        1,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        0,
+        30,
+        0,
+        3
+      ],
+      [
+        5,
+        15,
+        0,
+        0,
+        7,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        6,
+        2,
+        25
+      ]
+    ]
+  },
+  "vits16_standard_s2": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.7355623100303952,
+    "balanced_accuracy": 0.6063012967424732,
+    "macro_f1_present_classes": 0.6260078757187167,
+    "macro_f1_six_classes": 0.6260078757187167,
+    "auc_cancer": 0.9305617311397658,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.8426966292134831,
+        "recall": 0.7211538461538461,
+        "f1": 0.7772020725388601,
+        "sensitivity": 0.7211538461538461,
+        "specificity": 0.9377777777777778,
+        "auc_ovr": 0.9355555555555556,
+        "tp": 75,
+        "fp": 14,
+        "tn": 211,
+        "fn": 29
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.6790123456790124,
+        "recall": 0.9090909090909091,
+        "f1": 0.7773851590106007,
+        "sensitivity": 0.9090909090909091,
+        "specificity": 0.75,
+        "auc_ovr": 0.914037666878576,
+        "tp": 110,
+        "fp": 52,
+        "tn": 156,
+        "fn": 11
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.75,
+        "recall": 0.42857142857142855,
+        "f1": 0.5454545454545454,
+        "sensitivity": 0.42857142857142855,
+        "specificity": 0.9968944099378882,
+        "auc_ovr": 0.9929015084294587,
+        "tp": 3,
+        "fp": 1,
+        "tn": 321,
+        "fn": 4
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.896551724137931,
+        "recall": 0.7428571428571429,
+        "f1": 0.8125,
+        "sensitivity": 0.7428571428571429,
+        "specificity": 0.9897959183673469,
+        "auc_ovr": 0.9769679300291545,
+        "tp": 26,
+        "fp": 3,
+        "tn": 291,
+        "fn": 9
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.25,
+        "recall": 0.07142857142857142,
+        "f1": 0.1111111111111111,
+        "sensitivity": 0.07142857142857142,
+        "specificity": 0.9800664451827242,
+        "auc_ovr": 0.7760441385856669,
+        "tp": 2,
+        "fp": 6,
+        "tn": 295,
+        "fn": 26
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.7027027027027027,
+        "recall": 0.7647058823529411,
+        "f1": 0.7323943661971831,
+        "sensitivity": 0.7647058823529411,
+        "specificity": 0.9627118644067797,
+        "auc_ovr": 0.9651046859421734,
+        "tp": 26,
+        "fp": 11,
+        "tn": 284,
+        "fn": 8
+      }
+    ],
+    "confusion": [
+      [
+        75,
+        20,
+        0,
+        0,
+        5,
+        4
+      ],
+      [
+        9,
+        110,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        0,
+        0,
+        3
+      ],
+      [
+        2,
+        4,
+        0,
+        26,
+        0,
+        3
+      ],
+      [
+        3,
+        21,
+        0,
+        1,
+        2,
+        1
+      ],
+      [
+        0,
+        6,
+        1,
+        1,
+        0,
+        26
+      ]
+    ]
+  },
+  "vits16_standard_s3": {
+    "origin": "Predicciones CSV del repositorio; no inferencia nueva ni entrenamiento reejecutado.",
+    "split_and_label_match": true,
+    "n": 329,
+    "accuracy": 0.7629179331306991,
+    "balanced_accuracy": 0.7049049658006877,
+    "macro_f1_present_classes": 0.7144139223816612,
+    "macro_f1_six_classes": 0.7144139223816612,
+    "auc_cancer": 0.92068697198755,
+    "per_class": [
+      {
+        "class_name": "ACK",
+        "support": 104,
+        "precision": 0.7545454545454545,
+        "recall": 0.7980769230769231,
+        "f1": 0.7757009345794392,
+        "sensitivity": 0.7980769230769231,
+        "specificity": 0.88,
+        "auc_ovr": 0.9173931623931624,
+        "tp": 83,
+        "fp": 27,
+        "tn": 198,
+        "fn": 21
+      },
+      {
+        "class_name": "BCC",
+        "support": 121,
+        "precision": 0.7647058823529411,
+        "recall": 0.859504132231405,
+        "f1": 0.8093385214007782,
+        "sensitivity": 0.859504132231405,
+        "specificity": 0.8461538461538461,
+        "auc_ovr": 0.9181698982835348,
+        "tp": 104,
+        "fp": 32,
+        "tn": 176,
+        "fn": 17
+      },
+      {
+        "class_name": "MEL",
+        "support": 7,
+        "precision": 0.8571428571428571,
+        "recall": 0.8571428571428571,
+        "f1": 0.8571428571428571,
+        "sensitivity": 0.8571428571428571,
+        "specificity": 0.9968944099378882,
+        "auc_ovr": 0.9986690328305236,
+        "tp": 6,
+        "fp": 1,
+        "tn": 321,
+        "fn": 1
+      },
+      {
+        "class_name": "NEV",
+        "support": 35,
+        "precision": 0.8709677419354839,
+        "recall": 0.7714285714285715,
+        "f1": 0.8181818181818182,
+        "sensitivity": 0.7714285714285715,
+        "specificity": 0.9863945578231292,
+        "auc_ovr": 0.9856171039844509,
+        "tp": 27,
+        "fp": 4,
+        "tn": 290,
+        "fn": 8
+      },
+      {
+        "class_name": "SCC",
+        "support": 28,
+        "precision": 0.4166666666666667,
+        "recall": 0.17857142857142858,
+        "f1": 0.25,
+        "sensitivity": 0.17857142857142858,
+        "specificity": 0.9767441860465116,
+        "auc_ovr": 0.7888585666824869,
+        "tp": 5,
+        "fp": 7,
+        "tn": 294,
+        "fn": 23
+      },
+      {
+        "class_name": "SEK",
+        "support": 34,
+        "precision": 0.7878787878787878,
+        "recall": 0.7647058823529411,
+        "f1": 0.7761194029850746,
+        "sensitivity": 0.7647058823529411,
+        "specificity": 0.976271186440678,
+        "auc_ovr": 0.9813559322033899,
+        "tp": 26,
+        "fp": 7,
+        "tn": 288,
+        "fn": 8
+      }
+    ],
+    "confusion": [
+      [
+        83,
+        16,
+        0,
+        0,
+        4,
+        1
+      ],
+      [
+        14,
+        104,
+        0,
+        1,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        1,
+        27,
+        0,
+        5
+      ],
+      [
+        8,
+        14,
+        0,
+        0,
+        5,
+        1
+      ],
+      [
+        3,
+        2,
+        0,
+        2,
+        1,
+        26
+      ]
+    ]
+  }
+}

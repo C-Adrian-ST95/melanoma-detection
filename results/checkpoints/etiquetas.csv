@@ -1,0 +1,13 @@
+img_id,diagnostic,split,patient_id,lesion_id,archivo,fuente_hf
+PAT_1006_53_385.png,ACK,test,PAT_1006,53,images/PAT_1006_53_385.png,all_images/imgs_part_2/PAT_1006_53_385.png
+PAT_1021_112_40.png,ACK,test,PAT_1021,112,images/PAT_1021_112_40.png,all_images/imgs_part_2/PAT_1021_112_40.png
+PAT_101_1041_651.png,BCC,test,PAT_101,1041,images/PAT_101_1041_651.png,all_images/imgs_part_1/PAT_101_1041_651.png
+PAT_151_227_63.png,BCC,test,PAT_151,227,images/PAT_151_227_63.png,all_images/imgs_part_1/PAT_151_227_63.png
+PAT_320_681_410.png,MEL,test,PAT_320,681,images/PAT_320_681_410.png,all_images/imgs_part_1/PAT_320_681_410.png
+PAT_495_941_26.png,MEL,test,PAT_495,941,images/PAT_495_941_26.png,all_images/imgs_part_1/PAT_495_941_26.png
+PAT_1109_436_141.png,NEV,test,PAT_1109,436,images/PAT_1109_436_141.png,all_images/imgs_part_3/PAT_1109_436_141.png
+PAT_1186_680_578.png,NEV,test,PAT_1186,680,images/PAT_1186_680_578.png,all_images/imgs_part_3/PAT_1186_680_578.png
+PAT_155_240_211.png,SCC,test,PAT_155,240,images/PAT_155_240_211.png,all_images/imgs_part_1/PAT_155_240_211.png
+PAT_183_283_495.png,SCC,test,PAT_183,283,images/PAT_183_283_495.png,all_images/imgs_part_1/PAT_183_283_495.png
+PAT_1070_308_751.png,SEK,test,PAT_1070,308,images/PAT_1070_308_751.png,all_images/imgs_part_2/PAT_1070_308_751.png
+PAT_107_160_609.png,SEK,test,PAT_107,160,images/PAT_107_160_609.png,all_images/imgs_part_1/PAT_107_160_609.png

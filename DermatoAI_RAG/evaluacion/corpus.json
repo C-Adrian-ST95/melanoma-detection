@@ -1,0 +1,32 @@
+[
+  {
+    "id": "41ffb23afb17affdf57b2fc6",
+    "filename": "404-2962-1-PB.pdf",
+    "title": "404-2962-1-PB",
+    "organization": "",
+    "url": "",
+    "license": "",
+    "sha256": "935ebc27c01f0d5bc23914bac1d9e00c46bb3efdc3113a27642c0402a51e2b8b",
+    "updated": "2026-11-07T00:35:43.738873+00:00",
+    "metadata": "{\"categories\": [], \"language\": \"auto\", \"license\": \"\", \"modality\": \"not_specified\", \"organization\": \"\", \"title\": \"404-2962-1-PB\", \"url\": \"\"}",
+    "pipeline": "2.1-structured-1",
+    "preparation_report": "{\"pipeline\": \"2.1-structured-1\", \"pages\": 43, \"ready\": 240, \"review\": 42, \"warnings\": [\"Página 1: orden de dos columnas estimado; revisar visualmente.\", \"Página 4: orden de dos columnas estimado; revisar visualmente.\", \"Página 5: orden de dos columnas estimado; revisar visualmente.\", \"Página 6: orden de dos columnas estimado; revisar visualmente.\", \"Página 7: orden de dos columnas estimado; revisar visualmente.\", \"Página 8: orden de dos columnas estimado; revisar visualmente.\", \"Página 9: orden de dos columnas estimado; revisar visualmente.\", \"Página 10: orden de dos columnas estimado; revisar visualmente.\", \"Página 11: orden de dos columnas estimado; revisar visualmente.\", \"Página 12: orden de dos columnas estimado; revisar visualmente.\", \"Página 13: orden de dos columnas estimado; revisar visualmente.\", \"Página 15: orden de dos columnas estimado; revisar visualmente.\", \"Página 16: orden de dos columnas estimado; revisar visualmente.\", \"Página 19: orden de dos columnas estimado; revisar visualmente.\", \"Página 20: orden de dos columnas estimado; revisar visualmente.\", \"Página 21: orden de dos columnas estimado; revisar visualmente.\", \"Página 22: orden de dos columnas estimado; revisar visualmente.\", \"Página 23: orden de dos columnas estimado; revisar visualmente.\", \"Página 24: orden de dos columnas estimado; revisar visualmente.\", \"Página 25: orden de dos columnas estimado; revisar visualmente.\", \"Página 26: orden de dos columnas estimado; revisar visualmente.\", \"Página 27: orden de dos columnas estimado; revisar visualmente.\", \"Página 28: orden de dos columnas estimado; revisar visualmente.\", \"Página 29: orden de dos columnas estimado; revisar visualmente.\", \"Página 30: orden de dos columnas estimado; revisar visualmente.\", \"Página 31: orden de dos columnas estimado; revisar visualmente.\", \"Página 33: orden de dos columnas estimado; revisar visualmente.\", \"Página 34: orden de dos columnas estimado; revisar visualmente.\", \"Página 35: orden de dos columnas estimado; revisar visualmente.\", \"Página 36: orden de dos columnas estimado; revisar visualmente.\", \"Página 37: orden de dos columnas estimado; revisar visualmente.\", \"Página 38: orden de dos columnas estimado; revisar visualmente.\", \"Página 39: orden de dos columnas estimado; revisar visualmente.\", \"Página 40: orden de dos columnas estimado; revisar visualmente.\", \"Página 41: orden de dos columnas estimado; revisar visualmente.\", \"Página 42: orden de dos columnas estimado; revisar visualmente.\"], \"category_note\": \"Categorías sugeridas por palabras y metadatos; requieren comprobación humana.\"}",
+    "fragments": 282,
+    "ready_fragments": 240
+  },
+  {
+    "id": "f43f03b7077ade765b51a80c",
+    "filename": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025.pdf",
+    "title": "revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025",
+    "organization": "",
+    "url": "",
+    "license": "",
+    "sha256": "f1163fc2f859be33e46b3cf1dad264081c569fa977989b279a7f851a02975e5f",
+    "updated": "2026-11-07T00:35:50.200084+00:00",
+    "metadata": "{\"categories\": [], \"language\": \"auto\", \"license\": \"\", \"modality\": \"not_specified\", \"organization\": \"\", \"title\": \"revision-estado-actual-queratosis-actinicas-etiopatogenia-diagnostico-tratamientos-disponibles-2025\", \"url\": \"\"}",
+    "pipeline": "2.1-structured-1",
+    "preparation_report": "{\"pipeline\": \"2.1-structured-1\", \"pages\": 15, \"ready\": 98, \"review\": 29, \"warnings\": [\"Página 2: orden de dos columnas estimado; revisar visualmente.\", \"Página 3: orden de dos columnas estimado; revisar visualmente.\", \"Página 4: orden de dos columnas estimado; revisar visualmente.\", \"Página 5: orden de dos columnas estimado; revisar visualmente.\", \"Página 6: orden de dos columnas estimado; revisar visualmente.\", \"Página 7: orden de dos columnas estimado; revisar visualmente.\", \"Página 8: orden de dos columnas estimado; revisar visualmente.\", \"Página 9: orden de dos columnas estimado; revisar visualmente.\", \"Página 10: orden de dos columnas estimado; revisar visualmente.\", \"Página 11: orden de dos columnas estimado; revisar visualmente.\", \"Página 12: orden de dos columnas estimado; revisar visualmente.\", \"Página 13: orden de dos columnas estimado; revisar visualmente.\", \"Página 14: orden de dos columnas estimado; revisar visualmente.\", \"Página 15: orden de dos columnas estimado; revisar visualmente.\"], \"category_note\": \"Categorías sugeridas por palabras y metadatos; requieren comprobación humana.\"}",
+    "fragments": 127,
+    "ready_fragments": 98
+  }
+]
